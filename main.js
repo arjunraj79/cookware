@@ -34,56 +34,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const mobileNav = document.querySelector('.mobile-nav');
     const closeBtn = document.querySelector('.close-btn');
+    const submenuLinks = document.querySelectorAll('.mobile-nav .has-submenu > a');
+    const backButtons = document.querySelectorAll('.mobile-nav .submenu-back a');
 
-    // Function to open the menu
+    // Function to open the main menu
     const openNav = () => {
         mobileNav.classList.add('open');
         document.body.style.overflow = 'hidden';
     };
 
-    // Function to close the menu
+    // Function to close the entire menu
     const closeNav = () => {
         mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
+        // Close all submenus when closing the main nav
+        document.querySelectorAll('.mobile-nav .submenu.open').forEach(submenu => {
+            submenu.classList.remove('open');
+        });
     };
 
     hamburgerMenu.addEventListener('click', openNav);
     closeBtn.addEventListener('click', closeNav);
 
-    // Submenu Accordion
-    const submenuLinks = document.querySelectorAll('.mobile-nav .has-submenu > a');
-
+    // Open submenus
     submenuLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            const parentLi = this.parentElement;
             const submenu = this.nextElementSibling;
-            const wasOpen = parentLi.classList.contains('open');
-
-            // Close all sibling submenus at the current level
-            const parentUl = parentLi.parentElement;
-            Array.from(parentUl.children).forEach(sibling => {
-                if (sibling.classList.contains('has-submenu') && sibling.classList.contains('open')) {
-                    sibling.classList.remove('open');
-                    sibling.querySelector('.submenu').style.maxHeight = null;
-                }
-            });
-
-            // If the clicked menu item was not already open, open it.
-            if (!wasOpen) {
-                parentLi.classList.add('open');
-                submenu.style.maxHeight = submenu.scrollHeight + 'px';
-            }
-            
-            // Adjust parent submenu height
-            let ancestor = parentLi.closest('.submenu');
-            while(ancestor) {
-                ancestor.style.maxHeight = ancestor.scrollHeight + 'px';
-                ancestor = ancestor.parentElement.closest('.submenu');
-            }
+            submenu.classList.add('open');
         });
     });
 
+    // Go back from submenus
+    backButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parentSubmenu = this.closest('.submenu');
+            parentSubmenu.classList.remove('open');
+        });
+    });
 
     // Close menu when clicking outside of it
     document.addEventListener('click', (e) => {
