@@ -2,8 +2,8 @@
 body {
     font-family: 'Google Sans', sans-serif;
     margin: 0;
-    background-color: #fff; /* White background */
-    color: #000; /* Black text */
+    background-color: #fff;
+    color: #000;
     overflow-x: hidden;
 }
 
@@ -258,8 +258,8 @@ h3 {
 
 /* Sidebar Navigation */
 .sidebar-nav {
-    width: 250px;
-    padding: 4rem 1rem;
+    width: 300px; /* Increased width */
+    padding: 4rem 2rem; /* Increased padding */
     background-color: #f8f8f8;
     border-right: 1px solid #eee;
     position: sticky;
