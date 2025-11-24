@@ -1,0 +1,889 @@
+[
+  {
+    "id": "SBP1.5L",
+    "title": "Steelbird PEXA 1.5L",
+    "price": 1180,
+    "images": [
+      "https://i.ebayimg.com/images/g/OO0AAOSwaIhj4f9j/s-l1600.webp",
+      "https://www.jiomart.com/images/product/original/491540157/hawkins-classic-aluminiumpressure-cooker-1-5-l-cl15-product-images-o491540157-p604549729-0-202309121541.jpg?im=Resize=(1000,1000)",
+      "https://i.ebayimg.com/images/g/em4AAOSwTldj4f9j/s-l1600.webp",
+      "https://i.ebayimg.com/images/g/rvAAAOSwh8Zj4f9j/s-l1600.webp"
+    ],
+    "descriptionHtml": "<p>Steelbird PEXA 1.5L pressure cooker. Compact and durable.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "3.6 INCH",
+      "Product Height": "6.5 INCH",
+      "Base Diameter": "5.5 INCH",
+      "Product Weight": "1 KG (APPROX)",
+      "Product Weight With Box": "1.250 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBP2L",
+    "title": "Steelbird PEXA 2L",
+    "price": 1280,
+    "images": ["https://via.placeholder.com/1200x800?text=SBP2L"],
+    "descriptionHtml": "<p>Steelbird PEXA 2L pressure cooker.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "4.1 INCH",
+      "Product Height": "7.2 INCH",
+      "Base Diameter": "6.5 INCH",
+      "Product Weight": "1.100 KG (APPROX)",
+      "Product Weight With Box": "1.400 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBP3L",
+    "title": "Steelbird PEXA 3L",
+    "price": 1580,
+    "images": ["https://via.placeholder.com/1200x800?text=SBP3L"],
+    "descriptionHtml": "<p>Steelbird PEXA 3L pressure cooker.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5.5 INCH",
+      "Product Height": "8.5 INCH",
+      "Base Diameter": "6.5 INCH",
+      "Product Weight": "1.500 KG (APPROX)",
+      "Product Weight With Box": "1.900 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBP3.5L",
+    "title": "Steelbird PEXA 3.5L",
+    "price": 1730,
+    "images": ["https://via.placeholder.com/1200x800?text=SBP3.5L"],
+    "descriptionHtml": "<p>Steelbird PEXA 3.5L pressure cooker.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5.1 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "7 INCH",
+      "Product Weight": "1.650 KG (APPROX)",
+      "Product Weight With Box": "2.050 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBP5L",
+    "title": "Steelbird PEXA 5L",
+    "price": 1930,
+    "images": ["https://via.placeholder.com/1200x800?text=SBP5L"],
+    "descriptionHtml": "<p>Steelbird PEXA 5L pressure cooker.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "6 INCH",
+      "Product Height": "9 INCH",
+      "Base Diameter": "8 INCH",
+      "Product Weight": "2 KG (APPROX)",
+      "Product Weight With Box": "2.450 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBP6.5L",
+    "title": "Steelbird PEXA 6.5L",
+    "price": 2230,
+    "images": ["https://via.placeholder.com/1200x800?text=SBP6.5L"],
+    "descriptionHtml": "<p>Steelbird PEXA 6.5L pressure cooker.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "7.6 INCH",
+      "Product Height": "10.5 INCH",
+      "Base Diameter": "8 INCH",
+      "Product Weight": "2.100 KG (APPROX)",
+      "Product Weight With Box": "2.600 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBPIB1.5L",
+    "title": "Steelbird PEXA Induction Base 1.5L",
+    "price": 1280,
+    "images": ["https://via.placeholder.com/1200x800?text=SBPIB1.5L"],
+    "descriptionHtml": "<p>Induction base variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "3.6 INCH",
+      "Product Height": "6.5 INCH",
+      "Base Diameter": "5.5 INCH",
+      "Product Weight": "1.050 KG (APPROX)",
+      "Product Weight With Box": "1.300 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBPIB2L",
+    "title": "Steelbird PEXA Induction Base 2L",
+    "price": 1430,
+    "images": ["https://via.placeholder.com/1200x800?text=SBPIB2L"],
+    "descriptionHtml": "<p>Induction base variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "4.1 INCH",
+      "Product Height": "7.2 INCH",
+      "Base Diameter": "6.5 INCH",
+      "Product Weight": "1.150 KG (APPROX)",
+      "Product Weight With Box": "1.450 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBPIB3L",
+    "title": "Steelbird PEXA Induction Base 3L",
+    "price": 1680,
+    "images": ["https://via.placeholder.com/1200x800?text=SBPIB3L"],
+    "descriptionHtml": "<p>Induction base variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5.5 INCH",
+      "Product Height": "8.5 INCH",
+      "Base Diameter": "6.5 INCH",
+      "Product Weight": "1.550 KG (APPROX)",
+      "Product Weight With Box": "1.950 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBPIB3.5L",
+    "title": "Steelbird PEXA Induction Base 3.5L",
+    "price": 1830,
+    "images": ["https://via.placeholder.com/1200x800?text=SBPIB3.5L"],
+    "descriptionHtml": "<p>Induction base variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5.1 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "7 INCH",
+      "Product Weight": "1.700 KG (APPROX)",
+      "Product Weight With Box": "2.100 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBPIB5L",
+    "title": "Steelbird PEXA Induction Base 5L",
+    "price": 2030,
+    "images": ["https://via.placeholder.com/1200x800?text=SBPIB5L"],
+    "descriptionHtml": "<p>Induction base variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "6 INCH",
+      "Product Height": "9 INCH",
+      "Base Diameter": "8 INCH",
+      "Product Weight": "2.050 KG (APPROX)",
+      "Product Weight With Box": "2.500 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBPIB6.5L",
+    "title": "Steelbird PEXA Induction Base 6.5L",
+    "price": 2380,
+    "images": ["https://via.placeholder.com/1200x800?text=SBPIB6.5L"],
+    "descriptionHtml": "<p>Induction base variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "7.6 INCH",
+      "Product Height": "10.5 INCH",
+      "Base Diameter": "8 INCH",
+      "Product Weight": "2.150 KG (APPROX)",
+      "Product Weight With Box": "2.650 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBP8L",
+    "title": "Steelbird Big PEXA 8L",
+    "price": 2780,
+    "images": ["https://via.placeholder.com/1200x800?text=SBP8L"],
+    "descriptionHtml": "<p>Large capacity PEXA 8L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "6.25 INCH",
+      "Product Height": "9.5 INCH",
+      "Base Diameter": "10 INCH",
+      "Product Weight": "2.800 KG (APPROX)",
+      "Product Weight With Box": "3.450 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBP10L",
+    "title": "Steelbird Big PEXA 10L",
+    "price": 3030,
+    "images": ["https://via.placeholder.com/1200x800?text=SBP10L"],
+    "descriptionHtml": "<p>Large capacity PEXA 10L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "7.5 INCH",
+      "Product Height": "10.5 INCH",
+      "Base Diameter": "10 INCH",
+      "Product Weight": "3 KG (APPROX)",
+      "Product Weight With Box": "3.750 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBP12L",
+    "title": "Steelbird Big PEXA 12L",
+    "price": 3380,
+    "images": ["https://via.placeholder.com/1200x800?text=SBP12L"],
+    "descriptionHtml": "<p>Large capacity PEXA 12L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "8.9 INCH",
+      "Product Height": "11.6 INCH",
+      "Base Diameter": "10 INCH",
+      "Product Weight": "3.300 KG (APPROX)",
+      "Product Weight With Box": "4.050 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBP15L",
+    "title": "Steelbird Big PEXA 15L",
+    "price": 3880,
+    "images": ["https://via.placeholder.com/1200x800?text=SBP15L"],
+    "descriptionHtml": "<p>Large capacity PEXA 15L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "10.6 INCH",
+      "Product Height": "13.6 INCH",
+      "Base Diameter": "10 INCH",
+      "Product Weight": "3.500 KG (APPROX)",
+      "Product Weight With Box": "4.350 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM2L",
+    "title": "Steelbird MEXA 2L",
+    "price": 1380,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM2L"],
+    "descriptionHtml": "<p>Steelbird MEXA 2L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "4.5 INCH",
+      "Product Height": "7.1 INCH",
+      "Base Diameter": "5.2 INCH",
+      "Product Weight": "1.100 KG (APPROX)",
+      "Product Weight With Box": "1.400 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM3.5L",
+    "title": "Steelbird MEXA 3.5L",
+    "price": 1680,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM3.5L"],
+    "descriptionHtml": "<p>Steelbird MEXA 3.5L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "6.5 INCH",
+      "Product Weight": "1.500 KG (APPROX)",
+      "Product Weight With Box": "1.900 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM4L",
+    "title": "Steelbird MEXA 4L",
+    "price": 1830,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM4L"],
+    "descriptionHtml": "<p>Steelbird MEXA 4L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "7 INCH",
+      "Product Weight": "1.650 KG (APPROX)",
+      "Product Weight With Box": "2.050 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM5.5L",
+    "title": "Steelbird MEXA 5.5L",
+    "price": 2080,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM5.5L"],
+    "descriptionHtml": "<p>Steelbird MEXA 5.5L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5.5 INCH",
+      "Product Height": "8.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2 KG (APPROX)",
+      "Product Weight With Box": "2.450 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM6.5L",
+    "title": "Steelbird MEXA 6.5L",
+    "price": 2380,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM6.5L"],
+    "descriptionHtml": "<p>Steelbird MEXA 6.5L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "6.75 INCH",
+      "Product Height": "9.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2.100 KG (APPROX)",
+      "Product Weight With Box": "2.600 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB2L",
+    "title": "Steelbird MEXA Induction Base 2L",
+    "price": 1480,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB2L"],
+    "descriptionHtml": "<p>MEXA induction base 2L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "4.5 INCH",
+      "Product Height": "7.1 INCH",
+      "Base Diameter": "5.2 INCH",
+      "Product Weight": "1.150 KG (APPROX)",
+      "Product Weight With Box": "1.450 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB3.5L",
+    "title": "Steelbird MEXA Induction Base 3.5L",
+    "price": 1780,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB3.5L"],
+    "descriptionHtml": "<p>MEXA induction base 3.5L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "6.5 INCH",
+      "Product Weight": "1.550 KG (APPROX)",
+      "Product Weight With Box": "1.950 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB4L",
+    "title": "Steelbird MEXA Induction Base 4L",
+    "price": 1930,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB4L"],
+    "descriptionHtml": "<p>MEXA induction base 4L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "7 INCH",
+      "Product Weight": "1.700 KG (APPROX)",
+      "Product Weight With Box": "2.100 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB5.5L",
+    "title": "Steelbird MEXA Induction Base 5.5L",
+    "price": 2180,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB5.5L"],
+    "descriptionHtml": "<p>MEXA induction base 5.5L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5.5 INCH",
+      "Product Height": "8.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2.050 KG (APPROX)",
+      "Product Weight With Box": "2.500 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB6.5L",
+    "title": "Steelbird MEXA Induction Base 6.5L",
+    "price": 2480,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB6.5L"],
+    "descriptionHtml": "<p>MEXA induction base 6.5L.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "6.75 INCH",
+      "Product Height": "9.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2.150 KG (APPROX)",
+      "Product Weight With Box": "2.600 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBPIB1.5LB",
+    "title": "Steelbird PEXA Black IB 1.5L",
+    "price": 1530,
+    "images": ["https://via.placeholder.com/1200x800?text=SBPIB1.5LB"],
+    "descriptionHtml": "<p>Black lid / induction base variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "3.6 INCH",
+      "Product Height": "6.5 INCH",
+      "Base Diameter": "5.5 INCH",
+      "Product Weight": "1.050 KG (APPROX)",
+      "Product Weight With Box": "1.300 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBPIB3LB",
+    "title": "Steelbird PEXA Black IB 3L",
+    "price": 2030,
+    "images": ["https://via.placeholder.com/1200x800?text=SBPIB3LB"],
+    "descriptionHtml": "<p>Black lid / induction base variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5.5 INCH",
+      "Product Height": "8.5 INCH",
+      "Base Diameter": "6.5 INCH",
+      "Product Weight": "1.550 KG (APPROX)",
+      "Product Weight With Box": "1.950 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBPIB5LB",
+    "title": "Steelbird PEXA Black IB 5L",
+    "price": 2580,
+    "images": ["https://via.placeholder.com/1200x800?text=SBPIB5LB"],
+    "descriptionHtml": "<p>Black lid / induction base variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "6 INCH",
+      "Product Height": "9 INCH",
+      "Base Diameter": "8 INCH",
+      "Product Weight": "2.050 KG (APPROX)",
+      "Product Weight With Box": "2.500 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM2LB",
+    "title": "Steelbird MEXA Black 2L",
+    "price": 1780,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM2LB"],
+    "descriptionHtml": "<p>Black lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "4.5 INCH",
+      "Product Height": "7.1 INCH",
+      "Base Diameter": "5.2 INCH",
+      "Product Weight": "1.100 KG (APPROX)",
+      "Product Weight With Box": "1.400 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM3.5LB",
+    "title": "Steelbird MEXA Black 3.5L",
+    "price": 2180,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM3.5LB"],
+    "descriptionHtml": "<p>Black lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "6.5 INCH",
+      "Product Weight": "1.500 KG (APPROX)",
+      "Product Weight With Box": "1.900 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM4LB",
+    "title": "Steelbird MEXA Black 4L",
+    "price": 2430,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM4LB"],
+    "descriptionHtml": "<p>Black lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "7 INCH",
+      "Product Weight": "1.650 KG (APPROX)",
+      "Product Weight With Box": "2.050 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM5.5LB",
+    "title": "Steelbird MEXA Black 5.5L",
+    "price": 2730,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM5.5LB"],
+    "descriptionHtml": "<p>Black lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5.5 INCH",
+      "Product Height": "8.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2 KG (APPROX)",
+      "Product Weight With Box": "2.450 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM6.5LB",
+    "title": "Steelbird MEXA Black 6.5L",
+    "price": 2880,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM6.5LB"],
+    "descriptionHtml": "<p>Black lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "6.75 INCH",
+      "Product Height": "9.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2.100 KG (APPROX)",
+      "Product Weight With Box": "2.600 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB2LB",
+    "title": "Steelbird MEXA Black IB 2L",
+    "price": 1880,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB2LB"],
+    "descriptionHtml": "<p>Black IB variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "4.5 INCH",
+      "Product Height": "7.1 INCH",
+      "Base Diameter": "5.2 INCH",
+      "Product Weight": "1.150 KG (APPROX)",
+      "Product Weight With Box": "1.450 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB3.5LB",
+    "title": "Steelbird MEXA Black IB 3.5L",
+    "price": 2280,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB3.5LB"],
+    "descriptionHtml": "<p>Black IB variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "6.5 INCH",
+      "Product Weight": "1.550 KG (APPROX)",
+      "Product Weight With Box": "1.950 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB4LB",
+    "title": "Steelbird MEXA Black IB 4L",
+    "price": 2530,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB4LB"],
+    "descriptionHtml": "<p>Black IB variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "7 INCH",
+      "Product Weight": "1.700 KG (APPROX)",
+      "Product Weight With Box": "2.100 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB5.5LB",
+    "title": "Steelbird MEXA Black IB 5.5L",
+    "price": 2830,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB5.5LB"],
+    "descriptionHtml": "<p>Black IB variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5.5 INCH",
+      "Product Height": "8.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2.050 KG (APPROX)",
+      "Product Weight With Box": "2.500 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB6.5LB",
+    "title": "Steelbird MEXA Black IB 6.5L",
+    "price": 2980,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB6.5LB"],
+    "descriptionHtml": "<p>Black IB variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "6.75 INCH",
+      "Product Height": "9.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2.150 KG (APPROX)",
+      "Product Weight With Box": "2.650 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM2LS",
+    "title": "Steelbird MEXA Black with SS Lid 2L",
+    "price": 1930,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM2LS"],
+    "descriptionHtml": "<p>SS lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "4.5 INCH",
+      "Product Height": "7.1 INCH",
+      "Base Diameter": "5.2 INCH",
+      "Product Weight": "1.150 KG (APPROX)",
+      "Product Weight With Box": "1.450 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM3.5LS",
+    "title": "Steelbird MEXA Black with SS Lid 3.5L",
+    "price": 2330,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM3.5LS"],
+    "descriptionHtml": "<p>SS lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "6.5 INCH",
+      "Product Weight": "1.550 KG (APPROX)",
+      "Product Weight With Box": "1.950 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM4LS",
+    "title": "Steelbird MEXA Black with SS Lid 4L",
+    "price": 2580,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM4LS"],
+    "descriptionHtml": "<p>SS lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "7 INCH",
+      "Product Weight": "1.700 KG (APPROX)",
+      "Product Weight With Box": "2.100 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM5.5LS",
+    "title": "Steelbird MEXA Black with SS Lid 5.5L",
+    "price": 2880,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM5.5LS"],
+    "descriptionHtml": "<p>SS lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5.5 INCH",
+      "Product Height": "8.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2 KG (APPROX)",
+      "Product Weight With Box": "2.450 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBM6.5LS",
+    "title": "Steelbird MEXA Black with SS Lid 6.5L",
+    "price": 3080,
+    "images": ["https://via.placeholder.com/1200x800?text=SBM6.5LS"],
+    "descriptionHtml": "<p>SS lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "6.75 INCH",
+      "Product Height": "9.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2.100 KG (APPROX)",
+      "Product Weight With Box": "2.600 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB2LS",
+    "title": "Steelbird MEXA Black IB with SS Lid 2L",
+    "price": 2030,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB2LS"],
+    "descriptionHtml": "<p>IB + SS lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "4.5 INCH",
+      "Product Height": "7.1 INCH",
+      "Base Diameter": "5.2 INCH",
+      "Product Weight": "1.200 KG (APPROX)",
+      "Product Weight With Box": "1.500 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB3.5LS",
+    "title": "Steelbird MEXA Black IB with SS Lid 3.5L",
+    "price": 2430,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB3.5LS"],
+    "descriptionHtml": "<p>IB + SS lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "6.5 INCH",
+      "Product Weight": "1.600 KG (APPROX)",
+      "Product Weight With Box": "2 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB4LS",
+    "title": "Steelbird MEXA Black IB with SS Lid 4L",
+    "price": 2730,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB4LS"],
+    "descriptionHtml": "<p>IB + SS lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5 INCH",
+      "Product Height": "8 INCH",
+      "Base Diameter": "7 INCH",
+      "Product Weight": "1.750 KG (APPROX)",
+      "Product Weight With Box": "2.150 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB5.5LS",
+    "title": "Steelbird MEXA Black IB with SS Lid 5.5L",
+    "price": 3030,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB5.5LS"],
+    "descriptionHtml": "<p>IB + SS lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "5.5 INCH",
+      "Product Height": "8.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2.050 KG (APPROX)",
+      "Product Weight With Box": "2.550 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  },
+  {
+    "id": "SBMIB6.5LS",
+    "title": "Steelbird MEXA Black IB with SS Lid 6.5L",
+    "price": 3180,
+    "images": ["https://via.placeholder.com/1200x800?text=SBMIB6.5LS"],
+    "descriptionHtml": "<p>IB + SS lid variant.</p>",
+    "features": [],
+    "specs": {
+      "Body Height": "6.75 INCH",
+      "Product Height": "9.5 INCH",
+      "Base Diameter": "7.5 INCH",
+      "Product Weight": "2.150 KG (APPROX)",
+      "Product Weight With Box": "2.650 KG (APPROX)"
+    },
+    "delivery": "3-6 business days",
+    "return": "7 days (if unopened)",
+    "related": []
+  }
+]

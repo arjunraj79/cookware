@@ -886,3 +886,52 @@ footer {
         width: 100%;
     }
 }
+
+/* Product page helpers */
+.product-details .product-description {
+    text-align: left;
+}
+
+.product-description-box {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    color: #111;
+    line-height: 1.6;
+}
+
+.product-code {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.product-aside {
+    width: 360px;
+    min-width: 280px;
+}
+
+.product-aside .price-box {
+    padding: 1.75rem;
+}
+
+/* Increase spacing between buttons inside price box */
+.product-aside .price-box .btn-secondary,
+.product-aside .price-box .btn-primary {
+    padding: 0.9rem 1rem;
+}
+
+.product-aside .price-box .btn-secondary {
+    margin-right: 0.6rem;
+}
+
+@media (max-width: 768px) {
+    .product-aside {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .product-description-box {
+        padding: 1rem;
+    }
+}

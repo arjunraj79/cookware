@@ -68,6 +68,7 @@
                     <li><a href="#">Parts & Accessories</a></li>
                 </ul>
             </li>
+            <li><a href="products.html">View All Products</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="benefits-of-pressure-cooking.html">Benefits of Pressure Cooking</a></li>
@@ -194,49 +195,15 @@
 
         <section class="featured-products">
             <h2>Featured Products</h2>
-            <div class="product-grid">
-                <div class="product-card" data-id="1" data-name="Product Name 1" data-price="7999" data-image="assets/images/product1.jpg">
-                    <img src="assets/images/product1.jpg" alt="Product 1">
-                    <h3>Product Name 1</h3>
-                    <p>₹7,999</p>
-                    <button class="btn-secondary">Add to Cart</button>
-                </div>
-                 <div class="product-card" data-id="2" data-name="Product Name 2" data-price="9999" data-image="assets/images/product2.jpg">
-                    <img src="assets/images/product2.jpg" alt="Product 2">
-                    <h3>Product Name 2</h3>
-                    <p>₹9,999</p>
-                    <button class="btn-secondary">Add to Cart</button>
-                </div>
-                 <div class="product-card" data-id="3" data-name="Product Name 3" data-price="5999" data-image="assets/images/product3.jpg">
-                    <img src="assets/images/product3.jpg" alt="Product 3">
-                    <h3>Product Name 3</h3>
-                    <p>₹5,999</p>
-                    <button class="btn-secondary">Add to Cart</button>
-                </div>
+            <div id="featured-products-grid" class="product-grid">
+                <!-- Filled from categories/products.json -->
             </div>
         </section>
 
         <section class="best-sellers">
             <h2>Best Sellers</h2>
-            <div class="product-grid">
-                 <div class="product-card" data-id="4" data-name="Product Name 4" data-price="5999" data-image="assets/images/product3.jpg">
-                    <img src="assets/images/product3.jpg" alt="Product 3">
-                    <h3>Product Name 4</h3>
-                    <p>₹5,999</p>
-                    <button class="btn-secondary">Add to Cart</button>
-                </div>
-                <div class="product-card" data-id="5" data-name="Product Name 5" data-price="9999" data-image="assets/images/product2.jpg">
-                    <img src="assets/images/product2.jpg" alt="Product 2">
-                    <h3>Product Name 5</h3>
-                    <p>₹9,999</p>
-                    <button class="btn-secondary">Add to Cart</button>
-                </div>
-                 <div class="product-card" data-id="6" data-name="Product Name 6" data-price="7999" data-image="assets/images/product1.jpg">
-                    <img src="assets/images/product1.jpg" alt="Product 1">
-                    <h3>Product Name 6</h3>
-                    <p>₹7,999</p>
-                    <button class="btn-secondary">Add to Cart</button>
-                </div>
+            <div id="bestsellers-grid" class="product-grid">
+                <!-- Filled from categories/products.json -->
             </div>
         </section>
 
@@ -339,5 +306,55 @@
     <button id="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 
     <script src="main.js"></script>
+    <script>
+    (function(){
+        // Populate featured (first 3) and best-sellers (next 3) from categories/products.json
+        fetch('categories/products.json')
+        .then(r=>r.json())
+        .then(products=>{
+            if(!products || !products.length) return;
+            const featured = products.slice(0,3);
+            const bests = products.slice(3,6);
+
+            function renderGrid(list, containerId){
+                const container = document.getElementById(containerId);
+                if(!container) return;
+                container.innerHTML = '';
+                list.forEach(p => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    card.dataset.id = p.id || '';
+                    card.innerHTML = `
+                        <a href="categories/product-template.html?id=${encodeURIComponent(p.id)}"><img src="${(p.images&&p.images[0])||'assets/images/category-1.jpg'}" alt="${p.title||''}"></a>
+                        <h3><a href="categories/product-template.html?id=${encodeURIComponent(p.id)}">${p.title||''}</a></h3>
+                        <p>₹${p.price||0}</p>
+                        <button class="btn-secondary">Add to Cart</button>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+
+            renderGrid(featured, 'featured-products-grid');
+            renderGrid(bests, 'bestsellers-grid');
+
+            // delegate add-to-cart clicks for these grids
+            document.addEventListener('click', function(e){
+                if(e.target.classList.contains('btn-secondary') && e.target.closest('.product-card')){
+                    const card = e.target.closest('.product-card');
+                    const id = card.dataset.id;
+                    const prod = products.find(x=>x.id===id);
+                    if(!prod) return;
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    const existing = cart.find(i=>i.id===prod.id);
+                    if(existing) existing.quantity++;
+                    else cart.push({ id:prod.id, name:prod.title, price:prod.price, image:(prod.images&&prod.images[0])||'', quantity:1 });
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    const cartCount = document.querySelector('.cart-count'); if(cartCount) cartCount.textContent = cart.reduce((acc,i)=>acc+i.quantity,0);
+                }
+            });
+        })
+        .catch(err=>{ console.error('Failed to load products for homepage', err); });
+    })();
+    </script>
 </body>
 </html>

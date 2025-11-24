@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product — Template</title>
+    <meta name="description" content="Product page template" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header (reuse site header markup) -->
+    <header class="sticky-header">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <div class="hamburger-menu"><i class="fa-solid fa-grip"></i></div>
+            </div>
+            <div class="navbar-center">
+                <div class="logo"><a href="../index.html">ONS Cookers</a></div>
+            </div>
+            <div class="navbar-right">
+                <div class="header-icons">
+                    <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="../cart.html" class="cart-icon-container">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div id="search-bar" class="search-bar">
+            <input type="text" placeholder="Search for products..." id="search-input">
+            <button id="close-search"><i class="fa-solid fa-times"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-breadcrumb" style="text-align:left;padding:1.5rem 2rem;">
+            <a href="../index.html">Home</a> &raquo; <a href="../index.html">Category</a> &raquo; <strong id="product-breadcrumb-title">Product Name</strong>
+        </section>
+
+        <section class="product-hero" style="padding:0 2rem 2rem 2rem;">
+            <div class="slider" id="product-slider" style="position:relative;overflow:hidden;border-radius:8px;">
+                <div class="slides" style="display:flex;transition:transform 0.5s ease;">
+                    <!-- images will be injected here -->
+                </div>
+                <button class="slider-prev" aria-label="Previous" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:0.6rem 0.8rem;border-radius:6px;cursor:pointer;"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-next" aria-label="Next" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:0.6rem 0.8rem;border-radius:6px;cursor:pointer;"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="product-details" style="padding:2rem;">
+            <div style="display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;">
+                <div class="product-description" style="flex:1;min-width:300px;">
+                    <div class="product-description-box">
+                        <h1 id="product-title">Product Title</h1>
+                        <p class="product-code" style="color:#333;margin:0.25rem 0 0.6rem 0;">Product Code: <strong id="product-code">TEMPLATE-ID</strong></p>
+                        <p id="product-subtitle" style="color:#555;">Short tagline or subtitle</p>
+
+                        <h3>Product Description</h3>
+                        <div id="product-description-html">
+                            <p>Replace this block with the product description.</p>
+                        </div>
+
+                        <h4>Key Features</h4>
+                        <ul id="product-features">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                        </ul>
+
+                        <h4>Technical Details</h4>
+                        <ul id="product-specs">
+                            <li><strong>Body Height:</strong> —</li>
+                            <li><strong>Product Height:</strong> —</li>
+                        </ul>
+
+                        <h4>Care & Use</h4>
+                        <p id="product-care">Care instructions here.</p>
+                    </div>
+                </div>
+
+                <aside class="product-aside">
+                    <div class="price-box" style="background:#f8f8f8;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,0.05);text-align:left;">
+                        <div style="padding:0.25rem 0 1rem 0;">
+                            <p style="margin:0;color:#777;">MRP</p>
+                            <p id="product-price" style="font-size:1.8rem;font-weight:bold;margin:0.5rem 0;">₹0</p>
+                            <p style="color:#777;margin-bottom:1rem;">Inclusive of all taxes</p>
+                        </div>
+
+                        <div style="display:flex;gap:0.6rem;">
+                            <button id="add-to-cart-btn" class="btn-secondary" style="flex:1;">Add to Cart</button>
+                            <button id="buy-now-btn" class="btn-primary" style="flex:1;">Buy Now</button>
+                        </div>
+
+                        <div style="margin-top:1rem;font-size:0.95rem;color:#333;">
+                            <p><strong>Delivery:</strong> <span id="product-delivery">3-6 business days</span></p>
+                            <p><strong>Return:</strong> <span id="product-return">7 days (if unopened)</span></p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="related-products" style="padding:2rem;">
+            <h2 style="text-align:left;">Related Products</h2>
+            <div class="product-grid" id="related-products-grid">
+                <!-- related product cards (clone or render from data) -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (reuse site footer markup) -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="../benefits-of-pressure-cooking.html">Benefits of Pressure Cooking</a></li>
+                    <li><a href="../legal.html">Legal</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../terms-of-use.html">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@onscookers.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ONS Cookers. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="../main.js"></script>
+
+    <!-- old embedded product JSON removed; now load products.json and render by ?id= -->
+    <script>
+    (function(){
+      function qs(name){ const params = new URLSearchParams(location.search); return params.get(name); }
+
+      const productId = qs('id');
+      fetch('products.json')
+        .then(r => r.json())
+        .then(products => {
+          if(!products || !products.length) return;
+          const product = products.find(p => p.id === productId) || products[0];
+          document.title = (product.title || 'Product') + ' — Product';
+          document.getElementById('product-title').textContent = product.title || '';
+          document.getElementById('product-subtitle').textContent = product.subtitle || '';
+          document.getElementById('product-breadcrumb-title').textContent = product.title || '';
+                    // show product code
+                    const codeEl = document.getElementById('product-code');
+                    if(codeEl) codeEl.textContent = product.id || '';
+          document.getElementById('product-price').textContent = product.price ? '₹' + product.price : '₹0';
+          document.getElementById('product-delivery').textContent = product.delivery || '';
+          document.getElementById('product-return').textContent = product.return || '';
+
+          // description
+          const desc = document.getElementById('product-description-html');
+          if(desc) desc.innerHTML = product.descriptionHtml || '';
+
+          // features
+          const featuresEl = document.getElementById('product-features');
+          if(featuresEl){ featuresEl.innerHTML = ''; (product.features||[]).forEach(f => { const li = document.createElement('li'); li.textContent = f; featuresEl.appendChild(li); }); }
+
+          // specs
+          const specsEl = document.getElementById('product-specs');
+          if(specsEl){ specsEl.innerHTML = ''; if(product.specs){ Object.keys(product.specs).forEach(k => { const li = document.createElement('li'); li.innerHTML = '<strong>' + k + ':</strong> ' + product.specs[k]; specsEl.appendChild(li); }); } }
+
+          // images into slider
+          const slider = document.getElementById('product-slider');
+          const slides = slider.querySelector('.slides');
+          slides.innerHTML = '';
+          (product.images||[]).forEach(src => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = product.title || '';
+            img.style.width = '100%';
+            img.style.flexShrink = '0';
+            img.style.objectFit = 'cover';
+            img.style.height = '60vh';
+            slides.appendChild(img);
+          });
+
+          // related
+          const relatedGrid = document.getElementById('related-products-grid');
+          relatedGrid.innerHTML = '';
+          (product.related||[]).forEach(r => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.dataset.id = r.id || '';
+            card.innerHTML = '<a href="'+(r.url||'#')+'"><img src="'+(r.image||'https://via.placeholder.com/400x300')+'" alt="'+(r.name||'')+'"></a><h3>'+ (r.name||'') +'</h3><p>₹'+(r.price||'0')+'</p><button class="btn-secondary">Add to Cart</button>';
+            relatedGrid.appendChild(card);
+          });
+
+          // slider controls (basic)
+          const imgs = slides.querySelectorAll('img');
+          const prev = slider.querySelector('.slider-prev');
+          const next = slider.querySelector('.slider-next');
+          let index = 0;
+          const total = Math.max(1, imgs.length);
+          function show(i){ slides.style.transform = 'translateX(-' + (i * 100) + '%)'; }
+          if(prev) prev.addEventListener('click', ()=>{ index = (index - 1 + total) % total; show(index); });
+          if(next) next.addEventListener('click', ()=>{ index = (index + 1) % total; show(index); });
+          let interval = setInterval(()=>{ index = (index + 1) % total; show(index); }, 4000);
+          slider.addEventListener('mouseenter', ()=> clearInterval(interval));
+          slider.addEventListener('mouseleave', ()=> interval = setInterval(()=>{ index = (index + 1) % total; show(index); }, 4000));
+
+          // cart actions reuse existing add to cart logic
+          const productDataForCart = { id: product.id, name: product.title, price: product.price, image: (product.images && product.images[0]) || '' };
+
+          function addToCartLocal(product){
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existing = cart.find(i => i.id === product.id);
+            if(existing) existing.quantity++;
+            else cart.push({...product, quantity: 1});
+            localStorage.setItem('cart', JSON.stringify(cart));
+            const cartCount = document.querySelector('.cart-count');
+            if(cartCount) cartCount.textContent = cart.reduce((acc, i) => acc + i.quantity, 0);
+          }
+
+          const addBtn = document.getElementById('add-to-cart-btn');
+          const buyBtn = document.getElementById('buy-now-btn');
+          if(addBtn) addBtn.addEventListener('click', ()=> addToCartLocal(productDataForCart));
+          if(buyBtn) buyBtn.addEventListener('click', ()=>{ addToCartLocal(productDataForCart); window.location.href = '../cart.html'; });
+
+        })
+        .catch(err => { console.error('Failed to load products.json', err); });
+    })();
+    </script>
+</body>
+</html>
