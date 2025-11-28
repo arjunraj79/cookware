@@ -10,7 +10,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-   <div id="header"></div>
+   <header class="sticky-header">
+    <script src="/main.js"></script>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <div class="hamburger-menu">
+                    <i class="fa-solid fa-grip"></i>
+                </div>
+            </div>
+            <div class="navbar-center">
+                <div class="mobile-search"><input type="search" placeholder="Search products..." aria-label="Search"></div>
+                <div class="logo">
+                    <a href="index.html"><img src="assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo"></a>
+                </div>
+            </div>
+            <div class="navbar-right">
+                <div class="header-icons">
+                    <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#" class="cart-icon-container">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div id="search-bar" class="search-bar">
+            <input type="text" placeholder="Search for products..." id="search-input">
+            <button id="close-search"><i class="fa-solid fa-times"></i></button>
+        </div>
+    </header>
 
     <div class="mobile-nav">
         <div class="mobile-nav-header">
