@@ -1107,9 +1107,6 @@ html {
         flex-direction: column;
     }
 
-    .cart-summary {
-        width: 100%;
-    }
 }
 
 /* Product page helpers */
