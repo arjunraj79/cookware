@@ -19,6 +19,147 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Search handling: desktop (#search-input) and mobile (.mobile-search input)
+    let productsCache = null;
+
+    function loadProductsOnce(){
+        if(productsCache) return Promise.resolve(productsCache);
+        return fetch('categories/products.json').then(r=>r.json()).then(data => { productsCache = data; return data; });
+    }
+
+    function buildSuggestionItems(list, q){
+        // return top 6 matches
+        const ql = (q||'').toLowerCase();
+        const matches = (list||[]).filter(p => {
+            if(!p) return false;
+            if((p.id||'').toLowerCase().includes(ql)) return true;
+            if((p.title||'').toLowerCase().includes(ql)) return true;
+            if((p.subtitle||'').toLowerCase().includes(ql)) return true;
+            if((p.descriptionHtml||'').toLowerCase().replace(/<[^>]*>/g,'').includes(ql)) return true;
+            if(Array.isArray(p.features) && p.features.join(' ').toLowerCase().includes(ql)) return true;
+            if(p.specs && Object.values(p.specs).join(' ').toLowerCase().includes(ql)) return true;
+            return false;
+        });
+        return matches.slice(0,6);
+    }
+
+    function performSearch(query){
+        if(!query) return;
+        query = query.trim();
+        if(!query) return;
+        loadProductsOnce().then(products => {
+            const matches = buildSuggestionItems(products, query);
+            if(matches.length === 1){
+                location.href = 'categories/product-template.html?id=' + encodeURIComponent(matches[0].id);
+            } else {
+                location.href = 'products.html?q=' + encodeURIComponent(query);
+            }
+        }).catch(err => { console.error('Search failed', err); location.href = 'products.html?q=' + encodeURIComponent(query); });
+    }
+
+    // desktop input
+    if(searchInput){
+        searchInput.addEventListener('keydown', function(e){
+            if(e.key === 'Enter'){
+                performSearch(this.value);
+            }
+        });
+    }
+
+    // mobile inputs (there may be many on different pages)
+    document.querySelectorAll('.mobile-search input').forEach(inp => {
+        inp.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ performSearch(this.value); } });
+    });
+
+    /* --- Live suggestions UI --- */
+    let suggestionBox = null;
+    let suggestionItems = [];
+    let activeIndex = -1;
+
+    function ensureSuggestionBox(){
+        if(suggestionBox) return suggestionBox;
+        suggestionBox = document.createElement('div');
+        suggestionBox.className = 'search-suggestions';
+        suggestionBox.style.display = 'none';
+        document.body.appendChild(suggestionBox);
+        return suggestionBox;
+    }
+
+    function showSuggestionsFor(inputEl, q){
+        const box = ensureSuggestionBox();
+        loadProductsOnce().then(list => {
+            const items = buildSuggestionItems(list, q);
+            suggestionItems = items;
+            activeIndex = -1;
+            if(!items.length){ box.style.display = 'none'; return; }
+            box.innerHTML = '';
+            items.forEach((p, idx) => {
+                const row = document.createElement('div');
+                row.className = 'item';
+                row.dataset.index = idx;
+                row.innerHTML = `<div class="title">${escapeHtml(p.title||p.id||'Untitled')}</div><div class="meta">${escapeHtml(p.id||'')}</div><div class="price">${p.price?('₹'+p.price):''}</div>`;
+                row.addEventListener('click', () => {
+                    // navigate
+                    location.href = 'categories/product-template.html?id=' + encodeURIComponent(p.id);
+                });
+                box.appendChild(row);
+            });
+            positionSuggestionBox(inputEl, box);
+            box.style.display = 'block';
+        }).catch(err => { console.error('suggestions failed', err); });
+    }
+
+    function positionSuggestionBox(inputEl, box){
+        const r = inputEl.getBoundingClientRect();
+        const left = Math.max(8, r.left + window.scrollX);
+        const top = r.bottom + window.scrollY + 8;
+        box.style.left = left + 'px';
+        box.style.top = top + 'px';
+        box.style.width = Math.min(560, r.width) + 'px';
+    }
+
+    function hideSuggestions(){ if(suggestionBox) suggestionBox.style.display = 'none'; suggestionItems = []; activeIndex = -1; }
+
+    function escapeHtml(s){ return (s||'').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]); }
+
+    // bind suggestions to desktop input and mobile inputs
+    function bindTypeahead(inputEl){
+        let debounce = null;
+        inputEl.addEventListener('input', function(){
+            const q = this.value.trim();
+            clearTimeout(debounce);
+            if(!q){ hideSuggestions(); return; }
+            debounce = setTimeout(()=> showSuggestionsFor(this, q), 180);
+        });
+
+        inputEl.addEventListener('keydown', function(e){
+            if(!suggestionBox || suggestionBox.style.display==='none') return;
+            const items = Array.from(document.querySelectorAll('.search-suggestions .item'));
+            if(!items.length) return;
+            if(e.key === 'ArrowDown'){
+                e.preventDefault(); activeIndex = Math.min(items.length-1, activeIndex+1); updateActive(items);
+            } else if(e.key === 'ArrowUp'){
+                e.preventDefault(); activeIndex = Math.max(0, activeIndex-1); updateActive(items);
+            } else if(e.key === 'Enter'){
+                if(activeIndex >= 0 && items[activeIndex]){
+                    items[activeIndex].click();
+                    e.preventDefault();
+                }
+            } else if(e.key === 'Escape'){
+                hideSuggestions();
+            }
+        });
+
+        // hide when clicking outside
+        document.addEventListener('click', function(e){ if(!e.target.closest('.search-suggestions') && e.target !== inputEl) hideSuggestions(); });
+        window.addEventListener('resize', ()=> { if(suggestionBox && suggestionBox.style.display !== 'none') positionSuggestionBox(inputEl, suggestionBox); });
+    }
+
+    function updateActive(items){ items.forEach((el,i)=> el.classList.toggle('active', i===activeIndex)); if(activeIndex>=0 && items[activeIndex]) items[activeIndex].scrollIntoView({block:'nearest'}); }
+
+    if(searchInput) bindTypeahead(searchInput);
+    document.querySelectorAll('.mobile-search input').forEach(inp => bindTypeahead(inp));
+
 
     // Cart functionality
     const cartCount = document.querySelector('.cart-count');
@@ -155,6 +296,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     hamburgerMenu.addEventListener('click', openNav);
     closeBtn.addEventListener('click', closeNav);
+
+    // open mobile nav when bottom menu button is tapped
+    document.querySelectorAll('.mobile-menu').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openNav();
+        });
+    });
 
     submenuLinks.forEach(link => {
         link.addEventListener('click', function(e) {

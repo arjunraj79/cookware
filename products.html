@@ -14,10 +14,10 @@
     <nav class="navbar">
       <div class="navbar-left">
         <div class="hamburger-menu"><i class="fa-solid fa-grip"></i></div>
-        <a href="products.html" class="menu-link" style="margin-left:1rem;font-weight:600;color:#000;">Products</a>
       </div>
       <div class="navbar-center">
-        <div class="logo"><a href="index.html">ONS Cookers</a></div>
+        <div class="mobile-search"><input type="search" placeholder="Search products..." aria-label="Search"></div>
+        <div class="logo"><a href="index.html"><img src="assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo"></a></div>
       </div>
       <div class="navbar-right">
         <div class="header-icons">
@@ -32,6 +32,46 @@
       <button id="close-search"><i class="fa-solid fa-times"></i></button>
     </div>
   </header>
+  <div class="mobile-nav">
+    <div class="mobile-nav-header">
+      <div class="close-btn">
+        <i class="fa-solid fa-times"></i>
+      </div>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-submenu">
+        <a href="#">Products <i class="fa-solid fa-chevron-right"></i></a>
+        <ul class="submenu">
+          <li class="submenu-back"><a href="#"><i class="fa-solid fa-chevron-left"></i> Back</a></li>
+          <li><a href="#">Cooker</a></li>
+          <li class="has-submenu">
+            <a href="#">Cookware <i class="fa-solid fa-chevron-right"></i></a>
+            <ul class="submenu">
+              <li class="submenu-back"><a href="#"><i class="fa-solid fa-chevron-left"></i> Back</a></li>
+              <li><a href="#">Frying Pan</a></li>
+              <li><a href="#">Tava</a></li>
+              <li><a href="#">Deep Fry Pan</a></li>
+              <li><a href="#">Sets</a></li>
+              <li><a href="#">Saucepan</a></li>
+              <li><a href="#">Handi</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Electricals</a></li>
+          <li><a href="#">Parts & Accessories</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="benefits-of-pressure-cooking.html">Benefits of Pressure Cooking</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Store Locator</a></li>
+      <li><a href="legal.html">Legal</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms-of-use.html">Terms of Use</a></li>
+      <li><a href="products.html">View All Products</a></li>
+    </ul>
+  </div>
 
   <main>
     <section style="padding:2rem;text-align:left;">
@@ -66,22 +106,58 @@
         <p>Email: info@onscookers.com</p>
       </div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2024 ONS Cookers. All Rights Reserved.</p></div>
+    <div class="footer-bottom"><p>&copy; 2025 ONS Cookers. All Rights Reserved.</p></div>
   </footer>
 
   <button id="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="main.js"></script>
+  <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+    <div class="nav-row">
+      <a href="#" class="mobile-menu"><i class="fa-solid fa-bars"></i><span>Menu</span></a>
+      <a href="cart.html" class="mobile-cart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+      <a href="index.html" class="mobile-home"><i class="fa-solid fa-home"></i><span>Home</span></a>
+      <a href="#" class="mobile-login"><i class="fa-solid fa-user"></i><span>Profile</span></a>
+    </div>
+  </nav>
   <script>
     (function(){
-      // load products from categories/products.json and render a grid
+      // load products from categories/products.json and render a grid (supports optional search query ?q=...)
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchQuery = (urlParams.get('q') || '').trim();
+
       fetch('categories/products.json')
         .then(r => r.json())
         .then(products => {
           const grid = document.getElementById('products-grid');
           if(!grid) return;
           grid.innerHTML = '';
-          products.forEach(p => {
+
+          let shown = products;
+          if(searchQuery){
+            const q = searchQuery.toLowerCase();
+            shown = products.filter(p => {
+              if(!p) return false;
+              if((p.id||'').toLowerCase().includes(q)) return true;
+              if((p.title||'').toLowerCase().includes(q)) return true;
+              if((p.subtitle||'').toLowerCase().includes(q)) return true;
+              if((p.descriptionHtml||'').toLowerCase().replace(/<[^>]*>/g,'').includes(q)) return true;
+              if(Array.isArray(p.features) && p.features.join(' ').toLowerCase().includes(q)) return true;
+              if(p.specs && Object.values(p.specs).join(' ').toLowerCase().includes(q)) return true;
+              return false;
+            });
+            const heading = document.querySelector('main h1');
+            if(heading) heading.textContent = `Search results for "${searchQuery}"`;
+            if(shown.length === 0){
+              const p = document.createElement('p');
+              p.textContent = 'No products found for your search.';
+              p.style.color = '#777';
+              p.style.marginTop = '0.5rem';
+              document.querySelector('main').insertBefore(p, document.querySelector('main').children[1]);
+            }
+          }
+
+          shown.forEach(p => {
             const card = document.createElement('div');
             card.className = 'product-card';
             card.dataset.id = p.id || '';

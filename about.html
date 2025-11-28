@@ -18,8 +18,9 @@
                 </div>
             </div>
             <div class="navbar-center">
+                <div class="mobile-search"><input type="search" placeholder="Search products..." aria-label="Search"></div>
                 <div class="logo">
-                    <a href="index.html">ONS Cookers</a>
+                    <a href="index.html"><img src="assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo"></a>
                 </div>
             </div>
             <div class="navbar-right">
@@ -167,12 +168,81 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 ONS Cookers. All Rights Reserved.</p>
+            <p>&copy; 2025 ONS Cookers. All Rights Reserved.</p>
         </div>
     </footer>
 
     <button id="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 
     <script src="main.js"></script>
+    <script>
+    (function(){
+        // compute header height and set css variable for scroll-margin
+        function setHeaderOffset(){
+            const header = document.querySelector('.sticky-header');
+            const h = header ? header.getBoundingClientRect().height : 90;
+            document.documentElement.style.setProperty('--header-offset', (h + 12) + 'px');
+        }
+
+        // smooth scroll with offset for sidebar links
+        function bindSidebarAnchors(){
+            const sidebar = document.querySelector('.about-page-wrapper .sidebar-nav');
+            if(!sidebar) return;
+            const links = sidebar.querySelectorAll('a[href^="#"]');
+            links.forEach(a => {
+                a.addEventListener('click', function(e){
+                    e.preventDefault();
+                    const id = this.getAttribute('href').slice(1);
+                    const target = document.getElementById(id);
+                    if(!target) return;
+                    const header = document.querySelector('.sticky-header');
+                    const headerH = header ? header.getBoundingClientRect().height : 0;
+                    const offset = headerH + 12; // small gap
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                });
+            });
+        }
+
+        // highlight active section in sidebar using IntersectionObserver
+        function watchSections(){
+            const sections = Array.from(document.querySelectorAll('.about-company-content h2, .about-company-content h3'))
+                .filter(el => el.id);
+            const idToLink = {};
+            const sidebar = document.querySelector('.about-page-wrapper .sidebar-nav');
+            if(!sidebar) return;
+            sidebar.querySelectorAll('a[href^="#"]').forEach(a => {
+                const id = a.getAttribute('href').slice(1);
+                idToLink[id] = a;
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        const id = entry.target.id;
+                        // remove active from all
+                        Object.values(idToLink).forEach(l => l.classList.remove('active'));
+                        const link = idToLink[id];
+                        if(link) link.classList.add('active');
+                    }
+                });
+            }, { root: null, rootMargin: `-${(document.querySelector('.sticky-header')?.getBoundingClientRect().height || 90)}px 0px -60% 0px`, threshold: 0 });
+
+            sections.forEach(s => observer.observe(s));
+        }
+
+        // re-calc on load and resize
+        window.addEventListener('DOMContentLoaded', () => { setHeaderOffset(); bindSidebarAnchors(); watchSections(); });
+        window.addEventListener('resize', setHeaderOffset);
+    })();
+    </script>
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <div class="nav-row">
+            <a href="#" class="mobile-menu"><i class="fa-solid fa-bars"></i><span>Menu</span></a>
+            <a href="cart.html" class="mobile-cart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+            <a href="index.html" class="mobile-home"><i class="fa-solid fa-home"></i><span>Home</span></a>
+            <a href="#" class="mobile-login"><i class="fa-solid fa-user"></i><span>Profile</span></a>
+        </div>
+    </nav>
 </body>
 </html>

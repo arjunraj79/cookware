@@ -17,7 +17,8 @@
                 <div class="hamburger-menu"><i class="fa-solid fa-grip"></i></div>
             </div>
             <div class="navbar-center">
-                <div class="logo"><a href="../index.html">ONS Cookers</a></div>
+                <div class="mobile-search"><input type="search" placeholder="Search products..." aria-label="Search"></div>
+                <div class="logo"><a href="../index.html"><img src="../assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo"></a></div>
             </div>
             <div class="navbar-right">
                 <div class="header-icons">
@@ -142,7 +143,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 ONS Cookers. All Rights Reserved.</p>
+            <p>&copy; 2025 ONS Cookers. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -245,5 +246,13 @@
         .catch(err => { console.error('Failed to load products.json', err); });
     })();
     </script>
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <div class="nav-row">
+            <a href="#" class="mobile-menu"><i class="fa-solid fa-bars"></i><span>Menu</span></a>
+            <a href="../cart.html" class="mobile-cart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+            <a href="../index.html" class="mobile-home"><i class="fa-solid fa-home"></i><span>Home</span></a>
+            <a href="#" class="mobile-login"><i class="fa-solid fa-user"></i><span>Profile</span></a>
+        </div>
+    </nav>
 </body>
 </html>
