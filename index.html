@@ -11,34 +11,48 @@
 </head>
 <body>
     <header class="sticky-header">
-        <nav class="navbar">
-            <div class="navbar-left">
-                <div class="hamburger-menu">
-                    <i class="fa-solid fa-grip"></i>
-                </div>
+    <nav class="navbar">
+
+        <!-- LEFT — Hamburger -->
+        <div class="navbar-left">
+            <div class="hamburger-menu">
+                <i class="fa-solid fa-grip"></i>
             </div>
-            <div class="navbar-center">
-                <div class="mobile-search"><input type="search" placeholder="Search products..." aria-label="Search"></div>
-                <div class="logo">
-                    <a href="index.html"><img src="assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo"></a>
-                </div>
-            </div>
-            <div class="navbar-right">
-                <div class="header-icons">
-                    <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    <a href="cart.html" class="cart-icon-container">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                    <a href="#"><i class="fa-solid fa-user"></i></a>
-                </div>
-            </div>
-        </nav>
-        <div id="search-bar" class="search-bar">
-            <input type="text" placeholder="Search for products..." id="search-input">
-            <button id="close-search"><i class="fa-solid fa-times"></i></button>
         </div>
-    </header>
+
+        <!-- CENTER — Search -->
+        <div class="navbar-center">
+            <div class="mobile-search">
+                <input type="search" placeholder="Search products..." aria-label="Search">
+            </div>
+        </div>
+
+        <!-- RIGHT — Logo + Header Icons (icons hidden on mobile via CSS) -->
+        <div class="navbar-right">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo">
+                </a>
+            </div>
+
+            <div class="header-icons">
+                <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="cart.html" class="cart-icon-container">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Full-width search bar overlay (when search icon clicked on desktop) -->
+    <div id="search-bar" class="search-bar">
+        <input type="text" placeholder="Search for products..." id="search-input">
+        <button id="close-search"><i class="fa-solid fa-times"></i></button>
+    </div>
+</header>
 
     <div class="mobile-nav">
         <div class="mobile-nav-header">
