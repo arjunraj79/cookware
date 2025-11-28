@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </li>
 
         <li><a href="about.html">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
         <li><a href="benefits-of-pressure-cooking.html">Benefits of Pressure Cooking</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">Store Locator</a></li>

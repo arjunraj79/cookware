@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ONS Cookers</title>
+    <meta name="description" content="Get in touch with ONS Cookers. We're here to help with any questions about our premium cookware and kitchen products.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <div id="header"></div>
+
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <div class="close-btn">
+                <i class="fa-solid fa-times"></i>
+            </div>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="has-submenu">
+                <a href="#">Products <i class="fa-solid fa-chevron-right"></i></a>
+                <ul class="submenu">
+                    <li class="submenu-back"><a href="#"><i class="fa-solid fa-chevron-left"></i> Back</a></li>
+                    <li><a href="#">Cooker</a></li>
+                    <li class="has-submenu">
+                        <a href="#">Cookware <i class="fa-solid fa-chevron-right"></i></a>
+                        <ul class="submenu">
+                            <li class="submenu-back"><a href="#"><i class="fa-solid fa-chevron-left"></i> Back</a></li>
+                            <li><a href="#">Frying Pan</a></li>
+                            <li><a href="#">Tava</a></li>
+                            <li><a href="#">Deep Fry Pan</a></li>
+                            <li><a href="#">Sets</a></li>
+                            <li><a href="#">Saucepan</a></li>
+                            <li><a href="#">Handi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Electricals</a></li>
+                    <li><a href="#">Parts & Accessories</a></li>
+                </ul>
+            </li>
+            <li><a href="products.html">View All Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="benefits-of-pressure-cooking.html">Benefits of Pressure Cooking</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Store Locator</a></li>
+            <li><a href="legal.html">Legal</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="contact-hero">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you. Reach out to our team with any questions or feedback.</p>
+        </section>
+
+        <section class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                    <p class="contact-hours">Mon-Fri, 9 AM - 6 PM IST</p>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:support@onscookers.com">support@onscookers.com</a></p>
+                    <p class="contact-hours">We respond within 24 hours</p>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Address</h3>
+                    <p>ONS Cookers Pvt. Ltd.<br>123 Kitchen Street<br>Mumbai, India 400001</p>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fa-solid fa-clock"></i>
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9 AM - 6 PM<br>Saturday: 10 AM - 4 PM<br>Sunday: Closed</p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h2>Send us a Message</h2>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+                <div id="form-message" class="form-message"></div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>What is your return policy?</h4>
+                    <p>We offer a 30-day money-back guarantee on all products. If you're not satisfied, simply contact us for a hassle-free return.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Do you ship internationally?</h4>
+                    <p>Currently, we ship within India. For international inquiries, please contact our support team.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What is the warranty on your products?</h4>
+                    <p>All our cookers come with a 5-year warranty. Cookware items have a 2-year warranty against manufacturing defects.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How can I track my order?</h4>
+                    <p>You'll receive a tracking number via email once your order ships. You can use it to track your package in real-time.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Do you offer bulk discounts?</h4>
+                    <p>Yes! For bulk orders, please contact our sales team at sales@onscookers.com for special pricing.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How do I use the care instructions?</h4>
+                    <p>Each product includes detailed care instructions. You can also find them on our website or request them from support.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <button id="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="main.js"></script>
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <div class="nav-row">
+            <a href="#" class="mobile-menu"><i class="fa-solid fa-bars"></i><span>Menu</span></a>
+            <a href="cart.html" class="mobile-cart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+            <a href="index.html" class="mobile-home"><i class="fa-solid fa-home"></i><span>Home</span></a>
+            <a href="#" class="mobile-login"><i class="fa-solid fa-user"></i><span>Profile</span></a>
+        </div>
+    </nav>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                formMessage.innerHTML = '<p class="error">Please fill in all required fields.</p>';
+                return;
+            }
+
+            // Simulate form submission (in production, this would send to a backend)
+            formMessage.innerHTML = '<p class="success">Thank you for your message! We\'ll get back to you soon.</p>';
+            form.reset();
+
+            // Clear message after 5 seconds
+            setTimeout(() => {
+                formMessage.innerHTML = '';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
