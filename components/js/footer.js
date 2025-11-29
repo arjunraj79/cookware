@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="#">Products</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="benefits-of-pressure-cooking.html">Benefits of Pressure Cooking</a></li>
-            <li><a href="legal.html">Legal</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../contact-us.html">Contact Us</a></li>
+            <li><a href="../benefits-of-pressure-cooking.html">Benefits of Pressure Cooking</a></li>
+            <li><a href="../legal.html">Legal</a></li>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../terms-of-use.html">Terms of Use</a></li>
           </ul>
         </div>
         <div class="footer-section">

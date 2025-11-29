@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <!-- MOBILE LOGO -->
             <div class="logo logo-mobile">
-                <a href="index.html">
+                <a href="../index.html">
                     <img src="assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo">
                 </a>
             </div>
