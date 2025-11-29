@@ -370,13 +370,13 @@ main {
     display: flex;
 }
 
-section {
+.section {
     padding: 4rem 2rem;
     text-align: center;
     flex-grow: 1;
 }
 
-.hero-section,
+.hero-section
 .logo-slider,
 .categories-showcase,
 .youtube-video-section,
@@ -517,11 +517,25 @@ h3 {
     }
 }
 
-@media (max-width: 767px) {    /* Mobile */
+@media (max-width: 767px) { /* Mobile */
     .hero-section {
-        aspect-ratio: 0.75 / 1;
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;     /* remove forced aspect ratio */
+        overflow: hidden;       /* protect from side scrolling */
+    }
+
+    .hero-image {
+        width: 100vw;           /* force exactly viewport width */
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;      /* prevents empty white bars */
+        position: absolute;     /* disable absolute positioning */
+        left: 0;
+        top: 0;
     }
 }
+
 
 .hero-section::after {
     background-color: transparent;
