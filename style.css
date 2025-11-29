@@ -38,11 +38,13 @@ img {
 /* SECTION CONTROL */
 .navbar-left,
 .navbar-right {
-    flex: 0 0 auto;
+    flex: 1; /* both sides take equal width */
+    display: flex;
+    align-items: center;
 }
 
 .navbar-center {
-    flex: 1;
+    flex: 0 0 auto; /* keeps the logo true center */
     display: flex;
     justify-content: center;
 }
@@ -86,6 +88,17 @@ img {
 
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 600px) {
+    /* SECTION CONTROL */ 
+    .navbar-left, 
+    .navbar-right { 
+        flex: 0 0 auto; 
+    } 
+    
+    .navbar-center { 
+        flex: 1; 
+        display: flex; 
+        justify-content: center; 
+    }
 
     .navbar {
         padding: 0.6rem 1rem;
