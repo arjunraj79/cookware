@@ -88,17 +88,7 @@ img {
 
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 600px) {
-    /* SECTION CONTROL */ 
-    .navbar-left, 
-    .navbar-right { 
-        flex: 0 0 auto; 
-    } 
-    
-    .navbar-center { 
-        flex: 1; 
-        display: flex; 
-        justify-content: center; 
-    }
+    /* SECTION CONTROL */ .navbar-left, .navbar-right { flex: 0 0 auto; } .navbar-center { flex: 1; display: flex; justify-content: center; }
 
     .navbar {
         padding: 0.6rem 1rem;
@@ -396,7 +386,7 @@ section {
 .customer-reviews,
 .brand-story,
 .newsletter-signup {
-    padding: 0rem 0;
+    padding: 20px;
 }
 
 .about-company-content {
@@ -417,7 +407,7 @@ section {
 
 
 h2 {
-    text-align: left;
+    text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #000;
@@ -745,7 +735,7 @@ h3 {
 .product-card img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 5px;
 }
 

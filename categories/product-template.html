@@ -11,31 +11,61 @@
 </head>
 <body>
     <!-- Header (reuse site header markup) -->
+    
     <header class="sticky-header">
-        <nav class="navbar">
-            <div class="navbar-left">
-                <div class="hamburger-menu"><i class="fa-solid fa-grip"></i></div>
+    <nav class="navbar">
+
+        <!-- LEFT -->
+        <div class="navbar-left">
+            <div class="hamburger-menu">
+                <i class="fa-solid fa-grip"></i>
             </div>
-            <div class="navbar-center">
-                <div class="mobile-search"><input type="search" placeholder="Search products..." aria-label="Search"></div>
-                <div class="logo"><a href="../index.html"><img src="../assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo"></a></div>
-            </div>
-            <div class="navbar-right">
-                <div class="header-icons">
-                    <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    <a href="../cart.html" class="cart-icon-container">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                    <a href="#"><i class="fa-solid fa-user"></i></a>
-                </div>
-            </div>
-        </nav>
-        <div id="search-bar" class="search-bar">
-            <input type="text" placeholder="Search for products..." id="search-input">
-            <button id="close-search"><i class="fa-solid fa-times"></i></button>
         </div>
-    </header>
+
+        <!-- CENTER -->
+        <div class="navbar-center">
+            <div class="mobile-search">
+                <input type="search" placeholder="Search products..." aria-label="Search">
+            </div>
+
+            <!-- DESKTOP LOGO -->
+            <div class="logo logo-desktop">
+                <a href="/">
+                    <img src="/assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo">
+                </a>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="navbar-right">
+
+            <!-- MOBILE LOGO -->
+            <div class="logo logo-mobile">
+                <a href="index.html">
+                    <img src="/assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo">
+                </a>
+            </div>
+
+            <!-- ICONS (Desktop only) -->
+            <div class="header-icons">
+                <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="../cart.html" class="cart-icon-container">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- OPTIONAL EXPAND SEARCH BAR -->
+    <div id="search-bar" class="search-bar">
+        <input type="text" placeholder="Search for products..." id="search-input">
+        <button id="close-search"><i class="fa-solid fa-times"></i></button>
+    </div>
+</header>
+    
 
     <main>
         <section class="product-breadcrumb" style="text-align:left;padding:1.5rem 2rem;">
@@ -189,27 +219,41 @@
           const slider = document.getElementById('product-slider');
           const slides = slider.querySelector('.slides');
           slides.innerHTML = '';
-          (product.images||[]).forEach(src => {
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = product.title || '';
-            img.style.width = '100%';
-            img.style.flexShrink = '0';
-            img.style.objectFit = 'cover';
-            img.style.height = '60vh';
-            slides.appendChild(img);
-          });
+                    (product.images||[]).forEach(src => {
+                        const img = document.createElement('img');
+                        const imgSrc = (src && (src.startsWith('/') || src.startsWith('http'))) ? src : ('../' + src);
+                        img.src = imgSrc;
+                        img.alt = product.title || '';
+                        img.style.width = '100%';
+                        img.style.flexShrink = '0';
+                        img.style.objectFit = 'contain';
+                        img.style.height = '60vh';
+                        slides.appendChild(img);
+                    });
 
-          // related
-          const relatedGrid = document.getElementById('related-products-grid');
-          relatedGrid.innerHTML = '';
-          (product.related||[]).forEach(r => {
-            const card = document.createElement('div');
-            card.className = 'product-card';
-            card.dataset.id = r.id || '';
-            card.innerHTML = '<a href="'+(r.url||'#')+'"><img src="'+(r.image||'https://via.placeholder.com/400x300')+'" alt="'+(r.name||'')+'"></a><h3>'+ (r.name||'') +'</h3><p>₹'+(r.price||'0')+'</p><button class="btn-secondary">Add to Cart</button>';
-            relatedGrid.appendChild(card);
-          });
+                    // related: `product.related` may be an array of ids (strings) or objects with an `id`.
+                    const relatedGrid = document.getElementById('related-products-grid');
+                    relatedGrid.innerHTML = '';
+                    const relatedIds = product.related || [];
+                    // If relatedIds contains strings (ids) or objects with id, look up the full product in `products`
+                    relatedIds.forEach(rel => {
+                        const relId = (typeof rel === 'string') ? rel : (rel && (rel.id || rel.productId || ''));
+                        if(!relId) return;
+                        const relProduct = products.find(p => p.id === relId);
+                        if(!relProduct) return; // skip if not found
+
+                        const card = document.createElement('div');
+                        card.className = 'product-card';
+                        card.dataset.id = relProduct.id || '';
+
+                        // Normalize image path the same way as slider (keep root/absolute urls as-is, otherwise prefix ../)
+                        const relImgRaw = (relProduct.images && relProduct.images[0]) ? relProduct.images[0] : '';
+                        const relatedImg = (relImgRaw && (relImgRaw.startsWith('/') || relImgRaw.startsWith('http'))) ? relImgRaw : (relImgRaw ? ('../' + relImgRaw) : 'https://via.placeholder.com/400x300');
+
+                        const productUrl = '../categories/product-template.html?id=' + encodeURIComponent(relProduct.id);
+                        card.innerHTML = '<a href="'+productUrl+'"><img src="'+relatedImg+'" alt="'+(relProduct.title||'')+'"></a><h3>'+ (relProduct.title||'') +'</h3><p>₹'+(relProduct.price||'0')+'</p><button class="btn-secondary">Add to Cart</button>';
+                        relatedGrid.appendChild(card);
+                    });
 
           // slider controls (basic)
           const imgs = slides.querySelectorAll('img');
@@ -225,7 +269,7 @@
           slider.addEventListener('mouseleave', ()=> interval = setInterval(()=>{ index = (index + 1) % total; show(index); }, 4000));
 
           // cart actions reuse existing add to cart logic
-          const productDataForCart = { id: product.id, name: product.title, price: product.price, image: (product.images && product.images[0]) || '' };
+                const productDataForCart = { id: product.id, name: product.title, price: product.price, image: (product.images && product.images[0]) ? ((product.images[0].startsWith('/') || product.images[0].startsWith('http')) ? product.images[0] : ('../' + product.images[0])) : '' };
 
           function addToCartLocal(product){
             let cart = JSON.parse(localStorage.getItem('cart')) || [];

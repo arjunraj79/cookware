@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        closeSearch.addEventListener('click', () => {
-            searchBar.classList.remove('open');
-        });
+        if (closeSearch) {
+            closeSearch.addEventListener('click', () => {
+                searchBar.classList.remove('open');
+            });
+        }
     }
 
     // Search handling: desktop (#search-input) and mobile (.mobile-search input)
@@ -278,8 +280,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const mobileNav = document.querySelector('.mobile-nav');
     const closeBtn = document.querySelector('.close-btn');
-    const submenuLinks = document.querySelectorAll('.mobile-nav .has-submenu > a');
-    const backButtons = document.querySelectorAll('.mobile-nav .submenu-back a');
+    const submenuLinks = mobileNav ? mobileNav.querySelectorAll('.has-submenu > a') : [];
+    const backButtons = mobileNav ? mobileNav.querySelectorAll('.submenu-back a') : [];
 
     const openNav = () => {
         mobileNav.classList.add('open');
@@ -294,38 +296,44 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     };
 
-    hamburgerMenu.addEventListener('click', openNav);
-    closeBtn.addEventListener('click', closeNav);
+    if (hamburgerMenu && mobileNav) {
+        hamburgerMenu.addEventListener('click', openNav);
+    }
+    if (closeBtn && mobileNav) {
+        closeBtn.addEventListener('click', closeNav);
+    }
 
     // open mobile nav when bottom menu button is tapped
     document.querySelectorAll('.mobile-menu').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            openNav();
+            if (mobileNav) openNav();
         });
     });
 
-    submenuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const submenu = this.nextElementSibling;
-            submenu.classList.add('open');
+    if (mobileNav) {
+        submenuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const submenu = this.nextElementSibling;
+                if (submenu) submenu.classList.add('open');
+            });
         });
-    });
 
-    backButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const parentSubmenu = this.closest('.submenu');
-            parentSubmenu.classList.remove('open');
+        backButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const parentSubmenu = this.closest('.submenu');
+                if (parentSubmenu) parentSubmenu.classList.remove('open');
+            });
         });
-    });
 
-    document.addEventListener('click', (e) => {
-        if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !hamburgerMenu.contains(e.target)) {
-            closeNav();
-        }
-    });
+        document.addEventListener('click', (e) => {
+            if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && hamburgerMenu && !hamburgerMenu.contains(e.target)) {
+                closeNav();
+            }
+        });
+    }
 
     // Scroll to Top
     const scrollToTopBtn = document.getElementById('scroll-to-top');
@@ -345,11 +353,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-fetch('components/header.html')
-    .then(res => res.text())
-    .then(data => document.getElementById('header').innerHTML = data);
-
-fetch('components/footer.html')
-   .then(res => res.text())
-   .then(data => document.getElementById('footer').innerHTML = data);
