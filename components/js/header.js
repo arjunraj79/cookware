@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <!-- DESKTOP LOGO -->
             <div class="logo logo-desktop">
-                <a href="index.html">
-                    <img src="assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo">
+                <a href="/index.html">
+                    <img src="/assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo">
                 </a>
             </div>
         </div>
@@ -29,19 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <!-- MOBILE LOGO -->
             <div class="logo logo-mobile">
-                <a href="../index.html">
-                    <img src="assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo">
+                <a href="/index.html">
+                    <img src="/assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo">
                 </a>
             </div>
 
             <!-- ICONS (Desktop only) -->
             <div class="header-icons">
                 <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="cart.html" class="cart-icon-container">
+                <a href="/cart.html" class="cart-icon-container">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span class="cart-count">0</span>
                 </a>
-                <a href="../login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="/login.html"><i class="fa-solid fa-user"></i></a>
             </div>
 
         </div>
