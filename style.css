@@ -746,7 +746,7 @@ h3 {
 }
 
 .product-card {
-    background-color: #f8f8f8;
+    background-color: #086e8a;
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
@@ -766,15 +766,43 @@ h3 {
     border-radius: 5px;
 }
 
+/* Hexagon image mask for product thumbnails */
+.hexagon {
+    width: 160px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto 0.75rem auto;
+    display: block;
+    overflow: hidden; /* ensure clipping applies visually */
+    position: relative;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    transform: rotate(90deg);
+    border: 4px solid black;
+}
+.hexagon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transform: rotate(-90deg);
+   
+}
+
+@media (max-width: 600px) {
+    .hexagon { width: 120px; }
+}
+
+
 .product-card h3 {
     margin-top: 1rem;
     font-size: 1.2rem;
-    color: #000;
+    color: white;
 }
 
 .product-card p {
     font-size: 1.1rem;
-    color: #000;
+    color: white;
     font-style: italic;
 }
 
@@ -784,7 +812,7 @@ h3 {
     margin-top: 1rem;
     background-color: transparent;
     border: 2px solid #000;
-    color: #000;
+    color: white;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;

@@ -256,12 +256,14 @@
                     const card = document.createElement('div');
                     card.className = 'product-card';
                     card.dataset.id = p.id || '';
-                    card.innerHTML = `
-                        <a href="categories/product-template.html?id=${encodeURIComponent(p.id)}"><img src="${(p.images&&p.images[0])||'assets/images/category-1.jpg'}" alt="${p.title||''}"></a>
-                        <h3><a href="categories/product-template.html?id=${encodeURIComponent(p.id)}">${p.title||''}</a></h3>
-                        <p>₹${p.price||0}</p>
-                        <button class="btn-secondary">Add to Cart</button>
-                    `;
+                                        card.innerHTML = `
+                                                <a href="categories/product-template.html?id=${encodeURIComponent(p.id)}">
+                                                    <div class="hexagon"><img src="${(p.images&&p.images[0])||'assets/images/category-1.jpg'}" alt="${p.title||''}"></div>
+                                                </a>
+                                                <h3><a href="categories/product-template.html?id=${encodeURIComponent(p.id)}">${p.title||''}</a></h3>
+                                                <p>₹${p.price||0}</p>
+                                                <button class="btn-secondary">Add to Cart</button>
+                                        `;
                     container.appendChild(card);
                 });
             }
