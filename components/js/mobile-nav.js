@@ -49,4 +49,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Inject mobile nav just after opening body
   document.body.insertAdjacentHTML("afterbegin", mobileNavContent);
+  // Bind interactions immediately so pages that initialize main.js earlier still get a working menu
+  const mobileNav = document.querySelector('.mobile-nav');
+  const hamburger = document.querySelector('.hamburger-menu');
+  const closeBtnEl = mobileNav ? mobileNav.querySelector('.close-btn') : null;
+
+  const openNav = () => {
+    if(!mobileNav) return;
+    mobileNav.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeNav = () => {
+    if(!mobileNav) return;
+    mobileNav.classList.remove('open');
+    mobileNav.querySelectorAll('.submenu.open').forEach(s => s.classList.remove('open'));
+    document.body.style.overflow = '';
+  };
+
+  if(hamburger){
+    hamburger.addEventListener('click', (e) => { e.preventDefault(); openNav(); });
+  }
+  if(closeBtnEl){
+    closeBtnEl.addEventListener('click', (e) => { e.preventDefault(); closeNav(); });
+  }
+
+  // Submenu handling
+  if(mobileNav){
+    const submenuLinks = mobileNav.querySelectorAll('.has-submenu > a');
+    const backButtons = mobileNav.querySelectorAll('.submenu-back a');
+    submenuLinks.forEach(link => {
+      link.addEventListener('click', function(e){
+        e.preventDefault();
+        const submenu = this.nextElementSibling;
+        if(submenu) submenu.classList.add('open');
+      });
+    });
+    backButtons.forEach(btn => {
+      btn.addEventListener('click', function(e){ e.preventDefault(); const parent = this.closest('.submenu'); if(parent) parent.classList.remove('open'); });
+    });
+
+    // close when clicking outside
+    document.addEventListener('click', function(e){ if(mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !hamburger.contains(e.target)){ closeNav(); } });
+  }
 });
