@@ -75,13 +75,28 @@
         <section class="categories-showcase">
             <div class="category-row">
                 <div class="category-card large">
-                    <img src="assets/images/category-1.jpg" alt="Cookers" class="category-bg">
-                    <div class="category-content">
-                        <h3>Cookers</h3>
-                    </div>
+                
+                <picture>
+                <!-- Mobile (up to 600px) -->
+                <source srcset="/assets/img/Category Images/website banner 10- 366 x 80.8  copy.jpg" media="(max-width: 600px)">
+                
+                <!-- Tablet (600px to 1024px) -->
+                <source srcset="/assets/img/Category Images/website banner 10- 704 x 80.8  copy.jpg" media="(max-width: 1024px)">
+                
+                <!-- Desktop (default) -->
+                <img src="/assets/img/Category Images/website banner 10- 789 X 300  copy.jpg" 
+                    alt="Cookers" 
+                    class="category-bg">
+                </picture>
+
+                <div class="category-content">
+                <h3>Cookers</h3>
+                </div>
+
                 </div>
             </div>
-            <div class="category-row">
+
+            <!-- <div class="category-row">
                 <div class="category-card medium">
                     <img src="assets/images/category-2.jpg" alt="Cookware" class="category-bg">
                     <div class="category-content">
@@ -114,7 +129,7 @@
                         <h3>Handi</h3>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="category-row">
                 <div class="category-card large">
                     <img src="assets/images/category-7.jpg" alt="New Arrivals" class="category-bg">
