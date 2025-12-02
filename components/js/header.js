@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span class="cart-count">0</span>
                 </a>
-                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <a href="../login.html"><i class="fa-solid fa-user"></i></a>
             </div>
 
         </div>
