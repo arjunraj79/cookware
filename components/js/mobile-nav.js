@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li class="has-submenu">
           <a href="#">Products <i class="fa-solid fa-chevron-right"></i></a>
-          <ul class="submenu">
+            <ul class="submenu">
             <li class="submenu-back"><a href="#"><i class="fa-solid fa-chevron-left"></i> Back</a></li>
-            <li><a href="#">Cooker</a></li>
+            <li><a href="/products.html">Cookers</a></li>
 
             <li class="has-submenu">
               <a href="#">Cookware <i class="fa-solid fa-chevron-right"></i></a>
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <li><a href="/about.html">About Us</a></li>
         <li><a href="/contact-us.html">Contact Us</a></li>
         <li><a href="/benefits-of-pressure-cooking.html">Benefits of Pressure Cooking</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="/blog.html">Blog</a></li>
         <li><a href="/store-locator.html">Store Locator</a></li>
         <li><a href="/legal.html">Legal</a></li>
         <li><a href="/privacy-policy.html">Privacy Policy</a></li>
