@@ -143,7 +143,16 @@
         <section class="youtube-video-section">
             <h2>Our Cookware in Action</h2>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <picture>
+                    <!-- Mobile -->
+                    <source media="(max-width: 767px)" srcset="assets/img/poster/poster-mobile.jpg">
+
+                    <!-- Tablet -->
+                    <source media="(max-width: 1023px)" srcset="assets/img/poster/poster-tablet.jpg">
+
+                    <!-- Desktop (default) -->
+                    <img src="assets/img/poster/poster-desktop.jpg" alt="Our Cookware in Action" class="video-poster">
+                </picture>
             </div>
         </section>
 
