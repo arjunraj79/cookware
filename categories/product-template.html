@@ -250,11 +250,33 @@
             const cartCount = document.querySelector('.cart-count');
             if(cartCount) cartCount.textContent = cart.reduce((acc, i) => acc + i.quantity, 0);
           }
+                    // delegate clicks on related product 'Add to Cart' buttons to open product page first
+                    document.addEventListener('click', function(e){
+                        if(e.target.classList && e.target.classList.contains('btn-secondary')){
+                            const card = e.target.closest('.product-card');
+                            if(card && card.dataset && card.dataset.id){
+                                // navigate to that product page (open product page first)
+                                window.location.href = '/categories/product-template.html?id=' + encodeURIComponent(card.dataset.id);
+                            }
+                        }
+                    });
 
           const addBtn = document.getElementById('add-to-cart-btn');
           const buyBtn = document.getElementById('buy-now-btn');
-          if(addBtn) addBtn.addEventListener('click', ()=> addToCartLocal(productDataForCart));
-          if(buyBtn) buyBtn.addEventListener('click', ()=>{ addToCartLocal(productDataForCart); window.location.href = '../cart.html'; });
+                    // show toast helper
+                    function showToast(message){
+                        let t = document.createElement('div');
+                        t.className = 'site-toast';
+                        t.textContent = message;
+                        document.body.appendChild(t);
+                        // force reflow
+                        void t.offsetWidth;
+                        t.classList.add('show');
+                        setTimeout(()=>{ t.classList.remove('show'); setTimeout(()=> t.remove(),300); }, 2200);
+                    }
+
+                    if(addBtn) addBtn.addEventListener('click', ()=>{ addToCartLocal(productDataForCart); showToast('Item added to cart'); });
+                    if(buyBtn) buyBtn.addEventListener('click', ()=>{ addToCartLocal(productDataForCart); showToast('Item added to cart'); window.location.href = '../cart.html'; });
 
         })
         .catch(err => { console.error('Failed to load products.json', err); });

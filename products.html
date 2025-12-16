@@ -91,22 +91,12 @@
         })
         .catch(err => { console.error('Failed to load products', err); });
 
-      // delegate add-to-cart from grid
+      // delegate add-to-cart from grid — navigate to product page first
       document.addEventListener('click', function(e){
         if(e.target.classList.contains('btn-secondary') && e.target.closest('.product-card')){
           const card = e.target.closest('.product-card');
           const id = card.dataset.id;
-          fetch('categories/products.json').then(r=>r.json()).then(products=>{
-            const p = products.find(x=>x.id===id);
-            if(!p) return alert('Product not found');
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existing = cart.find(i=>i.id===p.id);
-            if(existing) existing.quantity++;
-            else cart.push({ id:p.id, name:p.title, price:p.price, image:(p.images&&p.images[0])||'', quantity:1 });
-            localStorage.setItem('cart', JSON.stringify(cart));
-            const cartCount = document.querySelector('.cart-count'); if(cartCount) cartCount.textContent = cart.reduce((acc, i)=>acc+i.quantity,0);
-            // silently update cart count
-          });
+          window.location.href = 'categories/product-template.html?id=' + encodeURIComponent(id);
         }
       });
     })();

@@ -271,19 +271,13 @@
             renderGrid(featured, 'featured-products-grid');
             renderGrid(bests, 'bestsellers-grid');
 
-            // delegate add-to-cart clicks for these grids
+            // delegate add-to-cart clicks for these grids — navigate to product page first
             document.addEventListener('click', function(e){
                 if(e.target.classList.contains('btn-secondary') && e.target.closest('.product-card')){
                     const card = e.target.closest('.product-card');
                     const id = card.dataset.id;
-                    const prod = products.find(x=>x.id===id);
-                    if(!prod) return;
-                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-                    const existing = cart.find(i=>i.id===prod.id);
-                    if(existing) existing.quantity++;
-                    else cart.push({ id:prod.id, name:prod.title, price:prod.price, image:(prod.images&&prod.images[0])||'', quantity:1 });
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    const cartCount = document.querySelector('.cart-count'); if(cartCount) cartCount.textContent = cart.reduce((acc,i)=>acc+i.quantity,0);
+                    // open product page where user can add to cart
+                    window.location.href = 'categories/product-template.html?id=' + encodeURIComponent(id);
                 }
             });
         })
