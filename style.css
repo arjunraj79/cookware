@@ -660,7 +660,10 @@ h3 {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    height: 300px;
+    width: 100%;
+    max-width: 1920px; /* limit to full HD width */
+    height: 1080px; /* full HD height */
+    margin: 0 auto; /* center on large screens */
     color: #000;
     display: flex;
     align-items: center;
@@ -706,9 +709,37 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain; /* show full image inside the 16:9 / 1920x1080 area */
     z-index: 0;
     filter: brightness(0.8);
+}
+
+/* Reduce spacing and padding between category cards on wider screens */
+@media (min-width: 1024px) {
+    .categories-showcase {
+        gap: 0.5rem; /* less vertical space between rows */
+        padding: 1rem 1rem; /* reduce outer padding */
+    }
+
+    .category-row {
+        gap: 0.5rem; /* less horizontal space between cards */
+    }
+}
+
+/* Responsive: scale down the full-HD container on smaller screens while preserving 16:9 ratio */
+@media (max-width: 1280px) {
+    .category-card {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 767px) {
+    .category-card {
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border-radius: 6px;
+    }
 }
 
 .category-content {
@@ -730,6 +761,7 @@ h3 {
     overflow: hidden;
     max-width: 100%;
     background: #e0e0e0;
+    border-radius: 20px;
 }
 
 .video-container iframe {
@@ -748,6 +780,7 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 /* Blog styles */
