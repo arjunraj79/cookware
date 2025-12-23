@@ -39,6 +39,16 @@
 .category-content{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; }
 .category-content h3{ color:#fff; font-size:24px; font-weight:600; text-transform:uppercase; letter-spacing:2.4px; margin:0; padding:10px 22px; background:rgba(0,0,0,0.28); border-radius:2px; pointer-events:auto; }
 
+/* Hide overlay text as requested (keeps markup but removes visible text) */
+.category-content{ display:none !important; }
+
+/* Image size guidance (exact pixel dimensions for export) */
+/* Mobile (portrait): 640 x 360 px  — used at <= 767px */
+/* Tablet: 1024 x 576 px  — used at <= 1023px */
+/* Laptop: 1366 x 768 px — good mid-size for laptop view (use responsive crop) */
+/* Desktop / Hero: 1920 x 1080 px — full-width banner hero */
+/* Recommended export: provide source images at 2x (retina) when possible, e.g. 1280x720 (mobile 2x), 2048x1152 (tablet 2x), 2732x1536 (desktop 2x) */
+
 .category-card:hover img.category-bg{ transform:scale(1.03); }
 
 @media (max-width:1023px){
