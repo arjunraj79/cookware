@@ -682,8 +682,8 @@ h3 {
     background-color: #f8f8f8;
     border-right: 1px solid #eee;
     position: sticky;
-    top: 0; 
-    height: 100vh; 
+    top: var(--header-height, 72px); /* Stay below header */
+    height: calc(100vh - var(--header-height, 72px)); 
     overflow-y: auto; 
     text-align: left;
 }
@@ -1730,8 +1730,9 @@ h3 {
 
 /* About page specific sidebar styling and smooth-scroll helpers */
 .about-page-wrapper .sidebar-nav {
-    width: 100%; /* 1/4 of the page */
-    max-width: 480px; /* keep a sensible max so the sidebar doesn't get too wide */
+    width: 280px; /* Fixed width for consistency across pages */
+    min-width: 280px;
+    flex-shrink: 0;
     padding: 1.5rem 1.25rem;
     border: 1px solid #e8e7c9;
     background: #fff;
