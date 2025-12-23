@@ -9,26 +9,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li class="has-submenu">
           <a href="#">Products <i class="fa-solid fa-chevron-right"></i></a>
-            <ul class="submenu">
-            <li class="submenu-back"><a href="#"><i class="fa-solid fa-chevron-left"></i> Back</a></li>
-            <li><a href="/products.html">Cookers</a></li>
-
-            <li class="has-submenu">
-              <a href="#">Cookware <i class="fa-solid fa-chevron-right"></i></a>
-              <ul class="submenu">
-                <li class="submenu-back"><a href="#"><i class="fa-solid fa-chevron-left"></i> Back</a></li>
-                <li><a href="#">Frying Pan</a></li>
-                <li><a href="#">Tava</a></li>
-                <li><a href="#">Deep Fry Pan</a></li>
-                <li><a href="#">Sets</a></li>
-                <li><a href="#">Saucepan</a></li>
-                <li><a href="#">Handi</a></li>
-              </ul>
-            </li>
-
-            <li><a href="#">Electricals</a></li>
-            <li><a href="#">Parts & Accessories</a></li>
-          </ul>
+          <div class="submenu-panel">
+            <ul class="submenu-grid">
+              <li>
+                <a href="/products.html">
+                  <div class="img-placeholder"></div>
+                  <span>Cookers</span>
+                </a>
+              </li>
+              <li>
+                <a href="/products.html?cat=cookware">
+                  <div class="img-placeholder"></div>
+                  <span>Cookware</span>
+                </a>
+              </li>
+              <li>
+                <a href="/products.html?cat=frying-pan">
+                  <div class="img-placeholder"></div>
+                  <span>Frying Pan</span>
+                </a>
+              </li>
+              <li>
+                <a href="/products.html?cat=tava">
+                  <div class="img-placeholder"></div>
+                  <span>Tava</span>
+                </a>
+              </li>
+              <li>
+                <a href="/products.html?cat=deep-fry-pan">
+                  <div class="img-placeholder"></div>
+                  <span>Deep Fry Pan</span>
+                </a>
+              </li>
+              <li>
+                <a href="/products.html?cat=sets">
+                  <div class="img-placeholder"></div>
+                  <span>Sets</span>
+                </a>
+              </li>
+              <li>
+                <a href="/products.html?cat=saucepan">
+                  <div class="img-placeholder"></div>
+                  <span>Saucepan</span>
+                </a>
+              </li>
+              <li>
+                <a href="/products.html?cat=handi">
+                  <div class="img-placeholder"></div>
+                  <span>Handi</span>
+                </a>
+              </li>
+              <li>
+                <a href="/products.html?cat=electricals">
+                  <div class="img-placeholder"></div>
+                  <span>Electricals</span>
+                </a>
+              </li>
+              <li>
+                <a href="/products.html?cat=accessories">
+                  <div class="img-placeholder"></div>
+                  <span>Parts & Accessories</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
 
         <li><a href="/about.html">About Us</a></li>
@@ -70,21 +114,73 @@ document.addEventListener("DOMContentLoaded", () => {
   window.openMobileNav = openNav;
   window.closeMobileNav = closeNav;
 
-  // Submenu handling
+  // Submenu handling - hover based
   if(mobileNav){
-    const submenuLinks = mobileNav.querySelectorAll('.has-submenu > a');
-    const backButtons = mobileNav.querySelectorAll('.submenu-back a');
-    submenuLinks.forEach(link => {
-      link.addEventListener('click', function(e){
-        e.preventDefault();
-        const submenu = this.nextElementSibling;
-        if(submenu) submenu.classList.add('open');
-      });
-    });
-    backButtons.forEach(btn => {
-      btn.addEventListener('click', function(e){ e.preventDefault(); const parent = this.closest('.submenu'); if(parent) parent.classList.remove('open'); });
+    const hasSubmenuItems = mobileNav.querySelectorAll('.has-submenu');
+    
+    hasSubmenuItems.forEach(item => {
+      const link = item.querySelector(':scope > a');
+      const submenuPanel = item.querySelector('.submenu-panel');
+      
+      if (link && submenuPanel) {
+        let closeTimeout;
+        
+        // Show submenu on hover over the menu item
+        item.addEventListener('mouseenter', function() {
+          clearTimeout(closeTimeout);
+          // Close any other open submenus
+          mobileNav.querySelectorAll('.submenu-panel.open').forEach(p => {
+            if (p !== submenuPanel) p.classList.remove('open');
+          });
+          submenuPanel.classList.add('open');
+        });
+        
+        item.addEventListener('mouseleave', function(e) {
+          // Check if mouse moved to submenu panel
+          const relatedTarget = e.relatedTarget;
+          if (submenuPanel.contains(relatedTarget)) {
+            return; // Don't close if moving to submenu
+          }
+          closeTimeout = setTimeout(() => {
+            submenuPanel.classList.remove('open');
+          }, 100);
+        });
+        
+        // Keep submenu open when hovering over it
+        submenuPanel.addEventListener('mouseenter', function() {
+          clearTimeout(closeTimeout);
+          submenuPanel.classList.add('open');
+        });
+        
+        submenuPanel.addEventListener('mouseleave', function(e) {
+          // Check if mouse moved back to menu item
+          const relatedTarget = e.relatedTarget;
+          if (item.contains(relatedTarget)) {
+            return;
+          }
+          closeTimeout = setTimeout(() => {
+            submenuPanel.classList.remove('open');
+          }, 100);
+        });
+        
+        // Also handle click for touch devices
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isOpen = submenuPanel.classList.contains('open');
+          // Close all other submenus
+          mobileNav.querySelectorAll('.submenu-panel.open').forEach(p => p.classList.remove('open'));
+          if (!isOpen) {
+            submenuPanel.classList.add('open');
+          }
+        });
+      }
     });
 
-    // Outside click is handled by header.js - do not add duplicate handler here
+    // Close submenu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!mobileNav.contains(e.target)) {
+        mobileNav.querySelectorAll('.submenu-panel.open').forEach(p => p.classList.remove('open'));
+      }
+    });
   }
 });

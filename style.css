@@ -357,10 +357,120 @@ img {
     background-color: #333;
 }
 
+/* Submenu Panel - Appears on Right covering rest of screen */
+.submenu-panel {
+    position: fixed;
+    top: var(--header-height, 72px);
+    left: 300px; /* sidebar width */
+    width: calc(100% - 300px);
+    height: calc(100vh - var(--header-height, 72px));
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px 15px;
+    box-sizing: border-box;
+    display: none;
+    z-index: 1050;
+    overflow-y: auto;
+}
+
+.submenu-panel.open {
+    display: block;
+}
+
+.submenu-grid {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    min-height: 415px;
+}
+
+.submenu-grid li {
+    display: block;
+    text-align: center;
+    width: calc(50% - 10px);
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+.submenu-grid li a {
+    padding: 10px;
+    color: #666;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 34px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+    transition: 0.2s;
+    text-decoration: none;
+    background: transparent;
+    border-radius: 8px;
+}
+
+.submenu-grid li a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.submenu-grid li a img {
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: none;
+}
+
+.submenu-grid li a .img-placeholder {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background: #333;
+    border: 2px dashed #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submenu-grid li a span {
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: capitalize;
+    margin-top: 8px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Has submenu indicator */
+.has-submenu {
+    position: static;
+}
+
+.has-submenu > a i {
+    transition: transform 0.2s ease;
+}
+
+.has-submenu:hover > a i {
+    transform: translateX(3px);
+}
+
+/* Old submenu styles - keep for backward compatibility */
 .submenu {
     position: absolute;
     top: 0;
-    left: 0; /* keep submenu inside the panel */
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: #1a1a1a;
@@ -368,7 +478,7 @@ img {
     list-style: none;
     padding: 0;
     margin: 0;
-    transform: translateX(100%); /* hidden to the right */
+    transform: translateX(100%);
     transition: transform 0.25s ease-in-out, visibility 0s linear 0.25s;
     visibility: hidden;
     z-index: 5;
@@ -384,7 +494,7 @@ img {
     display: block;
     padding: 1rem 1.5rem;
     margin: 0.5rem;
-    background-color: #2a2a2a; /* Boxed links */
+    background-color: #2a2a2a;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     color: #fff;
@@ -394,6 +504,35 @@ img {
     font-weight: bold;
     color: #aaa;
     border-bottom: none;
+}
+
+/* Mobile: submenu covers full screen */
+@media (max-width: 768px) {
+    .submenu-panel {
+        left: 0;
+        width: 100%;
+        top: var(--header-height, 72px);
+        height: calc(100vh - var(--header-height, 72px));
+        padding: 20px;
+    }
+    
+    .submenu-grid {
+        gap: 15px;
+    }
+    
+    .submenu-grid li {
+        width: calc(50% - 8px);
+        margin-bottom: 20px;
+    }
+    
+    .submenu-grid li a .img-placeholder {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .submenu-grid li a span {
+        font-size: 11px;
+    }
 }
 
 
