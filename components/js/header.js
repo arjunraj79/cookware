@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- LEFT -->
         <div class="navbar-left">
             <button class="hamburger-menu" aria-label="Open menu">
-                <img src="/assets/img/hamburger.png" alt="Menu" class="hamburger-icon">
+                <div class="hamburger" role="img" aria-label="Menu"></div>
             </button>
         </div>
 
@@ -57,4 +57,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Inject header at the beginning of <body>
   document.body.insertAdjacentHTML('afterbegin', headerContent);
+    // wire up hamburger sprite toggle and mobile panel trigger
+    const menuBtn = document.querySelector('.hamburger-menu');
+    const hamburger = document.querySelector('.hamburger');
+    if (menuBtn && hamburger) {
+        menuBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            hamburger.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+            document.body.classList.toggle('mobile-menu-open');
+        });
+
+        // close on ESC
+        document.addEventListener('keydown', (ev) => {
+            if (ev.key === 'Escape' && document.body.classList.contains('mobile-menu-open')) {
+                hamburger.classList.remove('active');
+                menuBtn.classList.remove('active');
+                document.body.classList.remove('mobile-menu-open');
+            }
+        });
+    }
 });
