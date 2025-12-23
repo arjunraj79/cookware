@@ -60,9 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // wire up hamburger sprite toggle and mobile nav trigger
     const menuBtn = document.querySelector('.hamburger-menu');
     const hamburger = document.querySelector('.hamburger');
-    const sideNav = document.querySelector('.mobile-nav');
 
     function closeMenu() {
+        const sideNav = document.querySelector('.mobile-nav');
         if (hamburger) hamburger.classList.remove('active');
         if (menuBtn) {
             menuBtn.classList.remove('active');
@@ -70,9 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         if (sideNav) sideNav.classList.remove('open');
         document.body.classList.remove('mobile-menu-open');
+        document.body.style.overflow = '';
     }
 
     function openMenu() {
+        const sideNav = document.querySelector('.mobile-nav');
         if (hamburger) hamburger.classList.add('active');
         if (menuBtn) {
             menuBtn.classList.add('active');
@@ -80,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         if (sideNav) sideNav.classList.add('open');
         document.body.classList.add('mobile-menu-open');
+        document.body.style.overflow = 'hidden';
     }
 
     let _lastToggle = 0;
@@ -88,16 +91,21 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!menuBtn.hasAttribute('aria-expanded')) menuBtn.setAttribute('aria-expanded', 'false');
 
         menuBtn.addEventListener('click', function (e) {
+            e.preventDefault();
             e.stopPropagation();
-            // toggle based on current state
-            const isOpen = sideNav && sideNav.classList.contains('open');
-            if (isOpen) closeMenu(); else openMenu();
+            // toggle based on hamburger sprite's own state (source of truth)
+            const isOpen = hamburger.classList.contains('active');
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
             _lastToggle = Date.now();
         });
 
         // close on ESC
         document.addEventListener('keydown', (ev) => {
-            if (ev.key === 'Escape' && document.body.classList.contains('mobile-menu-open')) {
+            if (ev.key === 'Escape' && hamburger.classList.contains('active')) {
                 closeMenu();
             }
         });
@@ -105,11 +113,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // close when clicking outside the sideNav; ignore clicks that happen
         // immediately after toggling to avoid the same event closing it.
         document.addEventListener('click', (ev) => {
+            const sideNav = document.querySelector('.mobile-nav');
             if (!sideNav) return;
-            // ignore immediate clicks (within 120ms) after toggle
-            if (Date.now() - _lastToggle < 120) return;
+            // ignore immediate clicks (within 150ms) after toggle
+            if (Date.now() - _lastToggle < 150) return;
             const isClickInside = sideNav.contains(ev.target) || menuBtn.contains(ev.target);
-            if (!isClickInside && sideNav.classList.contains('open')) {
+            if (!isClickInside && hamburger.classList.contains('active')) {
                 closeMenu();
             }
         });

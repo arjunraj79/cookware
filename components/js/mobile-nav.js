@@ -2,9 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileNavContent = `
     <div class="mobile-nav">
       <div class="mobile-nav-header">
-        <div class="close-btn">
-          <i class="fa-solid fa-times"></i>
-        </div>
       </div>
 
       <ul class="mobile-nav-links">
@@ -52,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Bind interactions immediately so pages that initialize main.js earlier still get a working menu
   const mobileNav = document.querySelector('.mobile-nav');
   const hamburger = document.querySelector('.hamburger-menu');
-  const closeBtnEl = mobileNav ? mobileNav.querySelector('.close-btn') : null;
 
   const openNav = () => {
     if(!mobileNav) return;
@@ -79,9 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Expose open/close helpers so other scripts can call them.
   window.openMobileNav = openNav;
   window.closeMobileNav = closeNav;
-  if(closeBtnEl){
-    closeBtnEl.addEventListener('click', (e) => { e.preventDefault(); closeNav(); });
-  }
 
   // Submenu handling
   if(mobileNav){
@@ -98,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener('click', function(e){ e.preventDefault(); const parent = this.closest('.submenu'); if(parent) parent.classList.remove('open'); });
     });
 
-    // close when clicking outside
-    document.addEventListener('click', function(e){ if(mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !hamburger.contains(e.target)){ closeNav(); } });
+    // Outside click is handled by header.js - do not add duplicate handler here
   }
 });
