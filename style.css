@@ -93,10 +93,29 @@ img {
     cursor: pointer;
 }
 
+.hamburger-menu.active {
+    background: transparent;
+}
+
 .hamburger-menu .hamburger-icon {
     width: 24px; /* visual size */
     height: 24px;
     display: block;
+}
+
+/* Hamburger Sprite */
+.hamburger {
+    width: 55px;
+    height: 62px;
+    background-image: url('/assets/menu.png');
+    background-size: 55px 125px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    transition: background-position 0.06s steps(1, end);
+}
+
+.hamburger.active {
+    background-position: 0 -62px;
 }
 
 /* ---------------- MOBILE ---------------- */
