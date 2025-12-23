@@ -57,23 +57,60 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Inject header at the beginning of <body>
   document.body.insertAdjacentHTML('afterbegin', headerContent);
-    // wire up hamburger sprite toggle and mobile panel trigger
+    // wire up hamburger sprite toggle and mobile nav trigger
     const menuBtn = document.querySelector('.hamburger-menu');
     const hamburger = document.querySelector('.hamburger');
+    const sideNav = document.querySelector('.mobile-nav');
+
+    function closeMenu() {
+        if (hamburger) hamburger.classList.remove('active');
+        if (menuBtn) {
+            menuBtn.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
+        }
+        if (sideNav) sideNav.classList.remove('open');
+        document.body.classList.remove('mobile-menu-open');
+    }
+
+    function openMenu() {
+        if (hamburger) hamburger.classList.add('active');
+        if (menuBtn) {
+            menuBtn.classList.add('active');
+            menuBtn.setAttribute('aria-expanded', 'true');
+        }
+        if (sideNav) sideNav.classList.add('open');
+        document.body.classList.add('mobile-menu-open');
+    }
+
+    let _lastToggle = 0;
     if (menuBtn && hamburger) {
+        // ensure button has aria-expanded
+        if (!menuBtn.hasAttribute('aria-expanded')) menuBtn.setAttribute('aria-expanded', 'false');
+
         menuBtn.addEventListener('click', function (e) {
             e.stopPropagation();
-            hamburger.classList.toggle('active');
-            menuBtn.classList.toggle('active');
-            document.body.classList.toggle('mobile-menu-open');
+            // toggle based on current state
+            const isOpen = sideNav && sideNav.classList.contains('open');
+            if (isOpen) closeMenu(); else openMenu();
+            _lastToggle = Date.now();
         });
 
         // close on ESC
         document.addEventListener('keydown', (ev) => {
             if (ev.key === 'Escape' && document.body.classList.contains('mobile-menu-open')) {
-                hamburger.classList.remove('active');
-                menuBtn.classList.remove('active');
-                document.body.classList.remove('mobile-menu-open');
+                closeMenu();
+            }
+        });
+
+        // close when clicking outside the sideNav; ignore clicks that happen
+        // immediately after toggling to avoid the same event closing it.
+        document.addEventListener('click', (ev) => {
+            if (!sideNav) return;
+            // ignore immediate clicks (within 120ms) after toggle
+            if (Date.now() - _lastToggle < 120) return;
+            const isClickInside = sideNav.contains(ev.target) || menuBtn.contains(ev.target);
+            if (!isClickInside && sideNav.classList.contains('open')) {
+                closeMenu();
             }
         });
     }

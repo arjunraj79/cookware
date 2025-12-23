@@ -66,9 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = '';
   };
 
-  if(hamburger){
-    hamburger.addEventListener('click', (e) => { e.preventDefault(); openNav(); });
-  }
+  // Do not bind the hamburger here; header.js handles toggle behavior.
+  // Expose open/close helpers so other scripts can call them.
+  window.openMobileNav = openNav;
+  window.closeMobileNav = closeNav;
   if(closeBtnEl){
     closeBtnEl.addEventListener('click', (e) => { e.preventDefault(); closeNav(); });
   }
