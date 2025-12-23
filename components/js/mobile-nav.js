@@ -84,9 +84,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Inject mobile nav just after opening body
   document.body.insertAdjacentHTML("afterbegin", mobileNavContent);
+
+  // Create a separate submenu overlay container that lives outside the sidebar
+  // This fixes the CSS transform issue where fixed positioning doesn't work inside transformed elements
+  const submenuOverlay = document.createElement('div');
+  submenuOverlay.className = 'submenu-overlay';
+  submenuOverlay.innerHTML = `
+    <div class="submenu-panel-desktop">
+      <ul class="submenu-grid">
+        <li>
+          <a href="/products.html">
+            <div class="img-placeholder"></div>
+            <span>Cookers</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products.html?cat=cookware">
+            <div class="img-placeholder"></div>
+            <span>Cookware</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products.html?cat=frying-pan">
+            <div class="img-placeholder"></div>
+            <span>Frying Pan</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products.html?cat=tava">
+            <div class="img-placeholder"></div>
+            <span>Tava</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products.html?cat=deep-fry-pan">
+            <div class="img-placeholder"></div>
+            <span>Deep Fry Pan</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products.html?cat=sets">
+            <div class="img-placeholder"></div>
+            <span>Sets</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products.html?cat=saucepan">
+            <div class="img-placeholder"></div>
+            <span>Saucepan</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products.html?cat=handi">
+            <div class="img-placeholder"></div>
+            <span>Handi</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products.html?cat=electricals">
+            <div class="img-placeholder"></div>
+            <span>Electricals</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products.html?cat=accessories">
+            <div class="img-placeholder"></div>
+            <span>Parts & Accessories</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  `;
+  document.body.appendChild(submenuOverlay);
+
   // Bind interactions immediately so pages that initialize main.js earlier still get a working menu
   const mobileNav = document.querySelector('.mobile-nav');
   const hamburger = document.querySelector('.hamburger-menu');
+  const submenuPanelDesktop = document.querySelector('.submenu-panel-desktop');
 
   const openNav = () => {
     if(!mobileNav) return;
@@ -115,71 +189,65 @@ document.addEventListener("DOMContentLoaded", () => {
   window.closeMobileNav = closeNav;
 
   // Submenu handling - hover based
-  if(mobileNav){
+  if(mobileNav && submenuPanelDesktop){
     const hasSubmenuItems = mobileNav.querySelectorAll('.has-submenu');
+    let closeTimeout;
     
     hasSubmenuItems.forEach(item => {
       const link = item.querySelector(':scope > a');
-      const submenuPanel = item.querySelector('.submenu-panel');
       
-      if (link && submenuPanel) {
-        let closeTimeout;
-        
+      if (link) {
         // Show submenu on hover over the menu item
         item.addEventListener('mouseenter', function() {
           clearTimeout(closeTimeout);
-          // Close any other open submenus
-          mobileNav.querySelectorAll('.submenu-panel.open').forEach(p => {
-            if (p !== submenuPanel) p.classList.remove('open');
-          });
-          submenuPanel.classList.add('open');
+          submenuPanelDesktop.classList.add('open');
         });
         
         item.addEventListener('mouseleave', function(e) {
           // Check if mouse moved to submenu panel
           const relatedTarget = e.relatedTarget;
-          if (submenuPanel.contains(relatedTarget)) {
+          if (submenuPanelDesktop.contains(relatedTarget)) {
             return; // Don't close if moving to submenu
           }
           closeTimeout = setTimeout(() => {
-            submenuPanel.classList.remove('open');
-          }, 100);
-        });
-        
-        // Keep submenu open when hovering over it
-        submenuPanel.addEventListener('mouseenter', function() {
-          clearTimeout(closeTimeout);
-          submenuPanel.classList.add('open');
-        });
-        
-        submenuPanel.addEventListener('mouseleave', function(e) {
-          // Check if mouse moved back to menu item
-          const relatedTarget = e.relatedTarget;
-          if (item.contains(relatedTarget)) {
-            return;
-          }
-          closeTimeout = setTimeout(() => {
-            submenuPanel.classList.remove('open');
+            submenuPanelDesktop.classList.remove('open');
           }, 100);
         });
         
         // Also handle click for touch devices
         link.addEventListener('click', function(e) {
           e.preventDefault();
-          const isOpen = submenuPanel.classList.contains('open');
-          // Close all other submenus
-          mobileNav.querySelectorAll('.submenu-panel.open').forEach(p => p.classList.remove('open'));
+          const isOpen = submenuPanelDesktop.classList.contains('open');
           if (!isOpen) {
-            submenuPanel.classList.add('open');
+            submenuPanelDesktop.classList.add('open');
+          } else {
+            submenuPanelDesktop.classList.remove('open');
           }
         });
       }
     });
 
+    // Desktop submenu panel hover handling
+    submenuPanelDesktop.addEventListener('mouseenter', function() {
+      clearTimeout(closeTimeout);
+      submenuPanelDesktop.classList.add('open');
+    });
+    
+    submenuPanelDesktop.addEventListener('mouseleave', function(e) {
+      const relatedTarget = e.relatedTarget;
+      // Don't close if moving back to sidebar
+      if (mobileNav.contains(relatedTarget)) {
+        return;
+      }
+      closeTimeout = setTimeout(() => {
+        submenuPanelDesktop.classList.remove('open');
+      }, 100);
+    });
+
     // Close submenu when clicking outside
     document.addEventListener('click', function(e) {
-      if (!mobileNav.contains(e.target)) {
-        mobileNav.querySelectorAll('.submenu-panel.open').forEach(p => p.classList.remove('open'));
+      if (!mobileNav.contains(e.target) && !submenuPanelDesktop.contains(e.target)) {
+        submenuPanelDesktop.classList.remove('open');
       }
     });
   }
