@@ -8,6 +8,165 @@
 
   <script src="/components/js/mobile-nav.js"></script>
 
+  <!-- Category Bar -->
+  <div class="category-bar">
+    <button class="cat-item">
+      <a href="/products.html?cat=cooker">
+        <img src="/assets/img/Category Images/cooker-icon.jpg" alt="Cooker" width="70" height="70">
+      </a>
+      <span>Cooker</span>
+    </button>
+    <button class="cat-item">
+      <a href="/products.html?cat=cookware">
+        <img src="/assets/img/Category Images/kadhai-icon.jpg" alt="Cookware" width="70" height="70">
+      </a>
+      <span>Cookware</span>
+    </button>
+    <button class="cat-item">
+      <a href="/products.html?cat=electricals">
+        <img src="/assets/img/Category Images/kettle-icon.jpg" alt="Electricals" width="70" height="70">
+      </a>
+      <span>Electricals</span>
+    </button>
+    <button class="cat-item">
+      <a href="/products.html?cat=accessories">
+        <img src="/assets/img/Category Images/idly-icon.jpg" alt="Accessories" width="70" height="70">
+      </a>
+      <span>Parts &amp; Accessories</span>
+    </button>
+    <button class="cat-item">
+      <a href="/products.html?cat=frying-pan">
+        <img src="/assets/img/Category Images/pan-icon.jpg" alt="Frying Pan" width="70" height="70">
+      </a>
+      <span>Frying Pan</span>
+    </button>
+    <button class="cat-item">
+      <a href="/products.html?cat=tava">
+        <img src="/assets/img/Category Images/tava-icon.jpg" alt="Tava" width="70" height="70">
+      </a>
+      <span>Tava</span>
+    </button>
+    <button class="cat-item">
+      <a href="/products.html?cat=deep-fry-pan">
+        <img src="/assets/img/Category Images/dfp-icon.jpg" alt="Deep Fry Pan" width="70" height="70">
+      </a>
+      <span>Deep Fry Pan</span>
+    </button>
+    <button class="cat-item">
+      <a href="/products.html?cat=sets">
+        <img src="/assets/img/Category Images/set-icon.jpg" alt="Sets" width="70" height="70">
+      </a>
+      <span>Sets</span>
+    </button>
+    <button class="cat-item">
+      <a href="/products.html?cat=saucepan">
+        <img src="/assets/img/Category Images/saucepan-icon.jpg" alt="Saucepan" width="70" height="70">
+      </a>
+      <span>Saucepan</span>
+    </button>
+    <button class="cat-item">
+      <a href="/products.html?cat=handi">
+        <img src="/assets/img/Category Images/handi-icon.jpg" alt="Handi" width="70" height="70">
+      </a>
+      <span>Handi</span>
+    </button>
+  </div>
+
+  <style>
+    /* Category Bar - Horizontal Scrollable Centered */
+    .category-bar {
+      background: #fff;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 15px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 25px;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scroll-snap-type: inline mandatory;
+      box-sizing: border-box;
+      border-bottom: 1px solid #eee;
+    }
+
+    .category-bar::-webkit-scrollbar {
+      height: 4px;
+    }
+    .category-bar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    .category-bar::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 2px;
+    }
+
+    .cat-item {
+      display: block;
+      font-family: 'Poppins', 'Google Sans', sans-serif;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      text-align: center;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      min-width: 80px;
+    }
+
+    .cat-item a {
+      padding: 6px 0;
+      font-size: 16px;
+      color: #a6a6a6;
+      font-weight: 300;
+      display: block;
+      text-decoration: none;
+    }
+
+    .cat-item a img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .cat-item:hover a img {
+      transform: scale(1.05);
+    }
+
+    .cat-item span {
+      color: #db0000;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      overflow-wrap: break-word;
+      display: inline-block;
+      max-width: 80px;
+    }
+
+    @media (max-width: 600px) {
+      .category-bar {
+        gap: 15px;
+        padding: 8px 10px;
+        justify-content: flex-start;
+      }
+      .cat-item {
+        min-width: 70px;
+      }
+      .cat-item a img {
+        width: 55px;
+        height: 55px;
+      }
+      .cat-item span {
+        font-size: 10px;
+        max-width: 70px;
+      }
+    }
+  </style>
+
   <main>
     <section style="padding:2rem;text-align:left;">
       <h1>All Products</h1>
