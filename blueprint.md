@@ -67,5 +67,5 @@ A premium and modern e-commerce website for a cookware brand. The website is ful
     *   Cart: "Add to Cart" functionality saves to local storage, cart icon displays item count, cart page displays items with quantity controls and total.
 6.  **Add Legal Pages:** Created `legal.html`, `privacy-policy.html`, `terms-of-use.html`, and linked them in the footer and mobile navigation.
 7.  **Create About Us Page:** `about.html` with detailed company information, image placeholders, and a sticky sidebar navigation.
-8.  **Create Benefits of Pressure Cooking Page:** `benefits-of-pressure-cooking.html` with detailed content and sidebar navigation.
+8.  **Create Almanac of Pressure Cooking Page:** `benefits-of-pressure-cooking.html` with detailed content and sidebar navigation.
 9.  **Design Product Detail Page:** `product-detail.html` with a banner photo carousel, two-column layout (description left, pricing/buttons right), and related products section. Hardcoded data for demonstration.
