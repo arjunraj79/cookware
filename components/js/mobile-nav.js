@@ -64,6 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileNav.classList.remove('open');
     mobileNav.querySelectorAll('.submenu.open').forEach(s => s.classList.remove('open'));
     document.body.style.overflow = '';
+    // sync hamburger sprite back to first image
+    const hamburgerSprite = document.querySelector('.hamburger');
+    const hamburgerBtn = document.querySelector('.hamburger-menu');
+    if (hamburgerSprite) hamburgerSprite.classList.remove('active');
+    if (hamburgerBtn) {
+      hamburgerBtn.classList.remove('active');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+    document.body.classList.remove('mobile-menu-open');
   };
 
   // Do not bind the hamburger here; header.js handles toggle behavior.
