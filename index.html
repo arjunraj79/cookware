@@ -74,75 +74,173 @@
         </section>
 
         <section class="categories-showcase">
-            <!-- Row 1: single large -->
+            <!-- Row 1: single large (1-up) -->
             <div class="category-row">
                 <div class="category-card large">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="assets/img/Banner-img/website-banner-12--640-×-360-.jpg">
-                        <source media="(max-width: 1023px)" srcset="assets/img/Banner-img/website-banner-12--1024-×-576-.jpg">
-                        <img src="assets/img/Banner-img/website-banner-12--1920-×-1080-.jpg" alt="Exclusive Helmets" class="category-bg">
+                        <!-- Mobile 1-up: 343x193 (2x: 686x386) -->
+                        <source media="(max-width: 767px)" 
+                            srcset="assets/img/Banner-img/Mobile/website-banner-12--mobile-343-×-193-px-.jpg 1x,
+                                    assets/img/Banner-img/Mobile/website-banner-12--mobile--686-×-386-.jpg 2x">
+                        <!-- Tablet 1-up: 992x558 (2x: 1984x1116) -->
+                        <source media="(max-width: 1023px)" 
+                            srcset="assets/img/Banner-img/Tablet/website-banner-12--Tablet-992-×-558-.jpg 1x,
+                                    assets/img/Banner-img/Tablet/website-banner-12--Tablet-1984-×-1116-.jpg 2x">
+                        <!-- Laptop 1-up: 1334x750 (2x: 2668x1500) -->
+                        <source media="(max-width: 1439px)" 
+                            srcset="assets/img/Banner-img/Laptop/website-banner-12--laptop--1334-×-750-.jpg 1x,
+                                    assets/img/Banner-img/Laptop/website-banner-12--laptop--2668-×-1500-.jpg 2x">
+                        <!-- Desktop 1-up: 1888x1062 (2x: 3776x2124) -->
+                        <img src="assets/img/Banner-img/Desktop/website-banner-12-desktop--1888-×-1062-.jpg" 
+                             srcset="assets/img/Banner-img/Desktop/website-banner-12-desktop--1888-×-1062-.jpg 1x,
+                                     assets/img/Banner-img/Desktop/website-banner-12--desktop-3776-×-2124-.jpg 2x"
+                             alt="Pressure Cookers" class="category-bg">
                     </picture>
-                    <div class="category-content"><h3>EXCLUSIVE HELMETS</h3></div>
+                    <div class="category-content"><h3>PRESSURE COOKERS</h3></div>
                 </div>
             </div>
 
-            <!-- Row 2: two columns -->
+            <!-- Row 2: two columns (2-up) -->
             <div class="category-row two-cols">
                 <div class="category-card medium">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="assets/img/Banner-img/website-banner-13--640-×-360-.jpg">
-                        <source media="(max-width: 1023px)" srcset="assets/img/Banner-img/website-banner-13--1024-×-576-.jpg">
-                        <img src="assets/img/Banner-img/website-banner-13--1920-×-1080-.jpg" alt="Helmets" class="category-bg">
+                        <!-- Mobile 2-up: 160x90 (2x: 320x180) -->
+                        <source media="(max-width: 767px)" 
+                            srcset="assets/img/Banner-img/Mobile/website-banner-13--mobile-160-×-90-.jpg 1x,
+                                    assets/img/Banner-img/Mobile/website-banner-13--mobile-320-×-180-.jpg 2x">
+                        <!-- Tablet 2-up: 484x272 (2x: 968x544) -->
+                        <source media="(max-width: 1023px)" 
+                            srcset="assets/img/Banner-img/Tablet/website-banner-13--Tablet-484-×-272-.jpg 1x,
+                                    assets/img/Banner-img/Tablet/website-banner-13--Tablet-968-×-544-.jpg 2x">
+                        <!-- Laptop 2-up: 655x368 (2x: 1310x736) -->
+                        <source media="(max-width: 1439px)" 
+                            srcset="assets/img/Banner-img/Laptop/website-banner-13--laptop--655-×-368-.jpg 1x,
+                                    assets/img/Banner-img/Laptop/website-banner-13--laptop--1310-×-736-.jpg 2x">
+                        <!-- Desktop 2-up: 932x524 (2x: 1864x1048) -->
+                        <img src="assets/img/Banner-img/Desktop/website-banner-13--desktop-932-×-524-.jpg" 
+                             srcset="assets/img/Banner-img/Desktop/website-banner-13--desktop-932-×-524-.jpg 1x,
+                                     assets/img/Banner-img/Desktop/website-banner-13--desktop-1864-×-1048-.jpg 2x"
+                             alt="Cookware" class="category-bg">
                     </picture>
-                    <div class="category-content"><h3>HELMETS</h3></div>
+                    <div class="category-content"><h3>COOKWARE</h3></div>
                 </div>
                 <div class="category-card medium">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="assets/img/Banner-img/website-banner-14--640-×-360-.jpg">
-                        <source media="(max-width: 1023px)" srcset="assets/img/Banner-img/website-banner-14--1024-×-576-.jpg">
-                        <img src="assets/img/Banner-img/website-banner-14--1920-×-1080-.jpg" alt="Accessories" class="category-bg">
+                        <!-- Mobile 2-up: 160x90 (2x: 320x180) -->
+                        <source media="(max-width: 767px)" 
+                            srcset="assets/img/Banner-img/Mobile/website-banner-14-mobile 160-×-90--.jpg 1x,
+                                    assets/img/Banner-img/Mobile/website-banner-14-mobile 320-×-180-.jpg 2x">
+                        <!-- Tablet 2-up: 484x272 (2x: 968x544) -->
+                        <source media="(max-width: 1023px)" 
+                            srcset="assets/img/Banner-img/Tablet/website-banner-14--Tablet-484-×-272-.jpg 1x,
+                                    assets/img/Banner-img/Tablet/website-banner-14--Tablet-968-×-544-.jpg 2x">
+                        <!-- Laptop 2-up: 655x368 (2x: 1310x736) -->
+                        <source media="(max-width: 1439px)" 
+                            srcset="assets/img/Banner-img/Laptop/website-banner-14--laptop--655-×-368-.jpg 1x,
+                                    assets/img/Banner-img/Laptop/website-banner-14--laptop--1310-×-736-.jpg 2x">
+                        <!-- Desktop 2-up: 932x524 (2x: 1864x1048) -->
+                        <img src="assets/img/Banner-img/Desktop/website-banner-14--desktop-932-×-524-.jpg" 
+                             srcset="assets/img/Banner-img/Desktop/website-banner-14--desktop-932-×-524-.jpg 1x,
+                                     assets/img/Banner-img/Desktop/website-banner-14--desktop-1864-×-1048-.jpg 2x"
+                             alt="Electricals" class="category-bg">
                     </picture>
-                    <div class="category-content"><h3>ACCESSORIES</h3></div>
+                    <div class="category-content"><h3>ELECTRICALS</h3></div>
                 </div>
             </div>
 
-            <!-- Row 3: three columns -->
+            <!-- Row 3: three columns (3-up) -->
             <div class="category-row three-cols">
                 <div class="category-card small">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="assets/img/Banner-img/website-banner-11--640-×-360-.jpg">
-                        <source media="(max-width: 1023px)" srcset="assets/img/Banner-img/website-banner-11--1024-×-576-.jpg">
-                        <img src="assets/img/Banner-img/website-banner-11--1920-×-1080-.jpg" alt="Jackets" class="category-bg">
+                        <!-- Mobile 3-up: 98x55 (2x: 196x110) -->
+                        <source media="(max-width: 767px)" 
+                            srcset="assets/img/Banner-img/Mobile/website-banner-11--mobile-98-×-55-.jpg 1x,
+                                    assets/img/Banner-img/Mobile/website-banner-11--mobile-196-×-110-.jpg 2x">
+                        <!-- Tablet 3-up: 315x177 (2x: 630x354) -->
+                        <source media="(max-width: 1023px)" 
+                            srcset="assets/img/Banner-img/Tablet/website-banner-11--Tablet-315-×-177-.jpg 1x,
+                                    assets/img/Banner-img/Tablet/website-banner-11--Tablet-630-×-354-.jpg 2x">
+                        <!-- Laptop 3-up: 429x241 (2x: 858x482) -->
+                        <source media="(max-width: 1439px)" 
+                            srcset="assets/img/Banner-img/Laptop/website-banner-11--laptop-429-×-241-.jpg 1x,
+                                    assets/img/Banner-img/Laptop/website-banner-11--laptop-858-×-482-.jpg 2x">
+                        <!-- Desktop 3-up: 613x346 (2x: 1226x692) -->
+                        <img src="assets/img/Banner-img/Desktop/website-banner-11--desktop-613-×-346-.jpg" 
+                             srcset="assets/img/Banner-img/Desktop/website-banner-11--desktop-613-×-346-.jpg 1x,
+                                     assets/img/Banner-img/Desktop/website-banner-11--desktop-1226-×-692-.jpg 2x"
+                             alt="Frying Pans" class="category-bg">
                     </picture>
-                    <div class="category-content"><h3>JACKETS</h3></div>
+                    <div class="category-content"><h3>FRYING PANS</h3></div>
                 </div>
                 <div class="category-card small">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="assets/img/Banner-img/website-banner-12--640-×-360-.jpg">
-                        <source media="(max-width: 1023px)" srcset="assets/img/Banner-img/website-banner-12--1024-×-576-.jpg">
-                        <img src="assets/img/Banner-img/website-banner-12--1920-×-1080-.jpg" alt="Riding Gears" class="category-bg">
+                        <!-- Mobile 3-up: 98x55 (2x: 196x110) -->
+                        <source media="(max-width: 767px)" 
+                            srcset="assets/img/Banner-img/Mobile/website-banner-12--mobile-98-×-55-.jpg 1x,
+                                    assets/img/Banner-img/Mobile/website-banner-12--mobile-196-×-110-.jpg 2x">
+                        <!-- Tablet 3-up: 315x177 (2x: 630x354) -->
+                        <source media="(max-width: 1023px)" 
+                            srcset="assets/img/Banner-img/Tablet/website-banner-12--Tablet-315-×-177-.jpg 1x,
+                                    assets/img/Banner-img/Tablet/website-banner-12--Tablet-630-×-354-.jpg 2x">
+                        <!-- Laptop 3-up: 429x241 (2x: 858x482) -->
+                        <source media="(max-width: 1439px)" 
+                            srcset="assets/img/Banner-img/Laptop/website-banner-12--laptop-429-×-241-.jpg 1x,
+                                    assets/img/Banner-img/Laptop/website-banner-12--laptop-858-×-482-.jpg 2x">
+                        <!-- Desktop 3-up: 613x346 (2x: 1226x692) -->
+                        <img src="assets/img/Banner-img/Desktop/website-banner-12--desktop-613-×-346-.jpg" 
+                             srcset="assets/img/Banner-img/Desktop/website-banner-12--desktop-613-×-346-.jpg 1x,
+                                     assets/img/Banner-img/Desktop/website-banner-12--desktop-1226-×-692-.jpg 2x"
+                             alt="Tava & Kadai" class="category-bg">
                     </picture>
-                    <div class="category-content"><h3>RIDING GEARS</h3></div>
+                    <div class="category-content"><h3>TAVA &amp; KADAI</h3></div>
                 </div>
                 <div class="category-card small">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="assets/img/Banner-img/website-banner-13--640-×-360-.jpg">
-                        <source media="(max-width: 1023px)" srcset="assets/img/Banner-img/website-banner-13--1024-×-576-.jpg">
-                        <img src="assets/img/Banner-img/website-banner-13--1920-×-1080-.jpg" alt="Shoe Cover" class="category-bg">
+                        <!-- Mobile 3-up: 98x55 (2x: 196x110) -->
+                        <source media="(max-width: 767px)" 
+                            srcset="assets/img/Banner-img/Mobile/website-banner-13--mobile-98-×-55-.jpg 1x,
+                                    assets/img/Banner-img/Mobile/website-banner-13--mobile-196-×-110-.jpg 2x">
+                        <!-- Tablet 3-up: 315x177 (2x: 630x354) -->
+                        <source media="(max-width: 1023px)" 
+                            srcset="assets/img/Banner-img/Tablet/website-banner-13--Tablet-315-×-177-.jpg 1x,
+                                    assets/img/Banner-img/Tablet/website-banner-13--Tablet-630-×-354-.jpg 2x">
+                        <!-- Laptop 3-up: 429x241 (2x: 858x482) -->
+                        <source media="(max-width: 1439px)" 
+                            srcset="assets/img/Banner-img/Laptop/website-banner-13--laptop-429-×-241-.jpg 1x,
+                                    assets/img/Banner-img/Laptop/website-banner-13--laptop-858-×-482-.jpg 2x">
+                        <!-- Desktop 3-up: 613x346 (2x: 1226x692) -->
+                        <img src="assets/img/Banner-img/Desktop/website-banner-13--desktop-613-×-346-.jpg" 
+                             srcset="assets/img/Banner-img/Desktop/website-banner-13--desktop-613-×-346-.jpg 1x,
+                                     assets/img/Banner-img/Desktop/website-banner-13--desktop-1226-×-692-.jpg 2x"
+                             alt="Parts & Accessories" class="category-bg">
                     </picture>
-                    <div class="category-content"><h3>SHOE COVER</h3></div>
+                    <div class="category-content"><h3>PARTS &amp; ACCESSORIES</h3></div>
                 </div>
             </div>
 
-            <!-- Row 4: single large -->
+            <!-- Row 4: single large (1-up) -->
             <div class="category-row">
                 <div class="category-card large">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="assets/img/Banner-img/website-banner-14--640-×-360-.jpg">
-                        <source media="(max-width: 1023px)" srcset="assets/img/Banner-img/website-banner-14--1024-×-576-.jpg">
-                        <img src="assets/img/Banner-img/website-banner-14--1920-×-1080-.jpg" alt="Beauty & Cosmetics" class="category-bg">
+                        <!-- Mobile 1-up: 343x193 (2x: 686x386) -->
+                        <source media="(max-width: 767px)" 
+                            srcset="assets/img/Banner-img/Mobile/website-banner-14--343-×-193-px-.jpg 1x,
+                                    assets/img/Banner-img/Mobile/website-banner-14-mobile 686-×-386-.jpg 2x">
+                        <!-- Tablet 1-up: 992x558 (2x: 1984x1116) -->
+                        <source media="(max-width: 1023px)" 
+                            srcset="assets/img/Banner-img/Tablet/website-banner-14-Tablet-992-×-558-.jpg 1x,
+                                    assets/img/Banner-img/Tablet/website-banner-14-Tablet-1984-×-1116-.jpg 2x">
+                        <!-- Laptop 1-up: 1334x750 (2x: 2668x1500) -->
+                        <source media="(max-width: 1439px)" 
+                            srcset="assets/img/Banner-img/Laptop/website-banner-14--laptop--1334-×-750-.jpg 1x,
+                                    assets/img/Banner-img/Laptop/website-banner-14--laptop--2668-×-1500-.jpg 2x">
+                        <!-- Desktop 1-up: 1888x1062 (2x: 3776x2124) -->
+                        <img src="assets/img/Banner-img/Desktop/website-banner-14--desktop--1888-×-1062-.jpg" 
+                             srcset="assets/img/Banner-img/Desktop/website-banner-14--desktop--1888-×-1062-.jpg 1x,
+                                     assets/img/Banner-img/Desktop/website-banner-14--desktop-3776-×-2124-.jpg 2x"
+                             alt="Cookware Sets" class="category-bg">
                     </picture>
-                    <div class="category-content"><h3>BEAUTY &amp; COSMETICS</h3></div>
+                    <div class="category-content"><h3>COOKWARE SETS</h3></div>
                 </div>
             </div>
         </section>
