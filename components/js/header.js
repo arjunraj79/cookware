@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <!-- DESKTOP LOGO -->
             <div class="logo logo-desktop">
                 <a href="/index.html">
-                    <img src="/assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo">
+                    <img src="/assets/img/ONS.png" alt="ONS Cookers" class="site-logo">
                 </a>
             </div>
         </div>
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <!-- MOBILE LOGO -->
             <div class="logo logo-mobile">
                 <a href="/index.html">
-                    <img src="/assets/img/ONS-cooker.svg" alt="ONS Cookers" class="site-logo">
+                    <img src="/assets/img/ONS.png" alt="ONS Cookers" class="site-logo">
                 </a>
             </div>
 
