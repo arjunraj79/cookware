@@ -1028,7 +1028,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* show full image inside the 16:9 / 1920x1080 area */
+    object-fit: cover; /* show full image inside the 16:9 / 1920x1080 area */
     z-index: 0;
     filter: brightness(0.8);
 }

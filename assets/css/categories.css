@@ -34,7 +34,7 @@
 .category-card picture,
 .category-card img.category-bg{ display:block; width:100%; height:100%; }
 
-.category-card img.category-bg{ object-fit:fill; vertical-align:middle; transform:translateZ(0); transition:transform 0.5s ease; display:block; }
+.category-card img.category-bg{ object-fit:cover; vertical-align:middle; transform:translateZ(0); transition:transform 0.5s ease; display:block; }
 
 .category-content{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; }
 .category-content h3{ color:#fff; font-size:24px; font-weight:600; text-transform:uppercase; letter-spacing:2.4px; margin:0; padding:10px 22px; background:rgba(0,0,0,0.28); border-radius:2px; pointer-events:auto; }
@@ -62,7 +62,7 @@
     .category-row:last-child{ margin-bottom:0; }
     .category-card{ flex:1 1 100%; min-height:auto; height:auto; background:transparent; }
     .category-content h3{ font-size:16px; padding:8px 14px; letter-spacing:1.8px; }
-    .category-card img.category-bg{ object-fit:contain; }
+    .category-card img.category-bg{ object-fit:cover; }
 }
 .category-content{
     position:absolute;
