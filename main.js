@@ -276,38 +276,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // Mobile Navigation
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    // Mobile Navigation - hamburger toggle is handled by header.js
+    // Here we only handle the bottom mobile menu button and submenu interactions
     const mobileNav = document.querySelector('.mobile-nav');
     const closeBtn = document.querySelector('.close-btn');
     const submenuLinks = mobileNav ? mobileNav.querySelectorAll('.has-submenu > a') : [];
     const backButtons = mobileNav ? mobileNav.querySelectorAll('.submenu-back a') : [];
 
-    const openNav = () => {
-        mobileNav.classList.add('open');
-        document.body.style.overflow = 'hidden';
-    };
-
-    const closeNav = () => {
-        mobileNav.classList.remove('open');
-        document.querySelectorAll('.mobile-nav .submenu.open').forEach(submenu => {
-            submenu.classList.remove('open');
-        });
-        document.body.style.overflow = '';
-    };
-
-    if (hamburgerMenu && mobileNav) {
-        hamburgerMenu.addEventListener('click', openNav);
-    }
+    // Close button handler - use the global closeMobileNav if available
     if (closeBtn && mobileNav) {
-        closeBtn.addEventListener('click', closeNav);
+        closeBtn.addEventListener('click', () => {
+            if (window.closeMobileNav) {
+                window.closeMobileNav();
+            } else {
+                mobileNav.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
     }
 
     // open mobile nav when bottom menu button is tapped
     document.querySelectorAll('.mobile-menu').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            if (mobileNav) openNav();
+            // Trigger the hamburger click to keep everything in sync
+            const hamburgerBtn = document.querySelector('.hamburger-menu');
+            if (hamburgerBtn) {
+                hamburgerBtn.click();
+            } else if (window.openMobileNav) {
+                window.openMobileNav();
+            }
         });
     });
 
@@ -326,12 +324,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const parentSubmenu = this.closest('.submenu');
                 if (parentSubmenu) parentSubmenu.classList.remove('open');
             });
-        });
-
-        document.addEventListener('click', (e) => {
-            if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && hamburgerMenu && !hamburgerMenu.contains(e.target)) {
-                closeNav();
-            }
         });
     }
 
