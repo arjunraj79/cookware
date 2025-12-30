@@ -62,7 +62,7 @@
     .category-row:last-child{ margin-bottom:0; }
     .category-card{ flex:1 1 100%; min-height:auto; height:auto; background:transparent; }
     .category-content h3{ font-size:16px; padding:8px 14px; letter-spacing:1.8px; }
-    .category-card img.category-bg{ object-fit:none; }
+    .category-card img.category-bg{ object-fit:contain; }
 }
 .category-content{
     position:absolute;
