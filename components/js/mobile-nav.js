@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <ul class="submenu-grid">
               <li>
                 <a href="/products.html">
-                  <div class="img-placeholder"></div>
+                  <img src="/assets/img/SubMenu/Mexa stroke image.png" alt="Cookers" class="submenu-img">
                   <span>Cookers</span>
                 </a>
               </li>
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <ul class="submenu-grid">
         <li>
           <a href="/products.html">
-            <div class="img-placeholder"></div>
+            <img src="/assets/img/SubMenu/Mexa stroke image.png" alt="Cookers" class="submenu-img">
             <span>Cookers</span>
           </a>
         </li>

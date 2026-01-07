@@ -202,8 +202,8 @@ img {
 
 @media (max-width: 600px) {
     .mobile-bottom-nav { display: block; }
-    /* give page content a bottom padding so content isn't hidden under the nav */
-    body { padding-bottom: 72px; }
+    /* give footer margin so it's not hidden under the nav */
+    .site-footer { margin-bottom: 58px; }
 }
 
 /* Search suggestions dropdown */
@@ -374,7 +374,7 @@ img {
     width: calc(100% - 300px);
     height: calc(100vh - var(--header-height, 72px));
     background: rgba(0, 0, 0, 0.85);
-    padding: 30px 15px;
+    padding: 40px 50px;
     box-sizing: border-box;
     display: none;
     z-index: 1150;
@@ -392,14 +392,14 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 40px;
     width: 100%;
 }
 
 .submenu-panel-desktop .submenu-grid li {
     display: block;
     text-align: center;
-    width: calc(50% - 10px);
+    width: auto;
     margin-bottom: 30px;
     list-style: none;
 }
@@ -431,10 +431,10 @@ img {
 }
 
 .submenu-panel-desktop .submenu-grid li a .img-placeholder {
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 180px;
     margin: 0 auto;
-    border-radius: 8px;
+    border-radius: 12px;
     background: #333;
     border: 2px dashed #555;
     display: flex;
@@ -442,12 +442,20 @@ img {
     justify-content: center;
 }
 
+.submenu-panel-desktop .submenu-grid li a .submenu-img {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
 .submenu-panel-desktop .submenu-grid li a span {
     color: #fff;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
     text-transform: capitalize;
-    margin-top: 8px;
+    margin-top: 12px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
@@ -1710,6 +1718,13 @@ h3 {
 
 #scroll-to-top:hover {
     background-color: #333;
+}
+
+/* Position scroll-to-top button above mobile bottom nav */
+@media (max-width: 600px) {
+    #scroll-to-top {
+        bottom: 80px; /* 58px nav height + 22px spacing */
+    }
 }
 
 /* Responsive */

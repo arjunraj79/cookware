@@ -1,70 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product — Template</title>
-    <meta name="description" content="Product page template" />
-    <link rel="stylesheet" href="../style.css" />
+    <meta name="description" content="Product page template">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    <!-- Header (reuse site header markup) -->
-    
-    <header class="sticky-header">
-    <nav class="navbar">
-
-        <!-- LEFT -->
-        <div class="navbar-left">
-            <button class="hamburger-menu" aria-label="Open menu">
-                <img src="/assets/img/hamburger.png" alt="Menu" class="hamburger-icon">
-            </button>
-        </div>
-
-        <!-- CENTER -->
-        <div class="navbar-center">
-            <div class="mobile-search">
-                <input type="search" placeholder="Search products..." aria-label="Search">
-            </div>
-
-            <!-- DESKTOP LOGO -->
-            <div class="logo logo-desktop">
-                <a href="/">
-                    <img src="/assets/img/ONS.png" alt="ONS Cookers" class="site-logo">
-                </a>
-            </div>
-        </div>
-
-        <!-- RIGHT -->
-        <div class="navbar-right">
-
-            <!-- MOBILE LOGO -->
-            <div class="logo logo-mobile">
-                <a href="index.html">
-                    <img src="/assets/img/ONS.png" alt="ONS Cookers" class="site-logo">
-                </a>
-            </div>
-
-            <!-- ICONS (Desktop only) -->
-            <div class="header-icons">
-                <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="../cart.html" class="cart-icon-container">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="cart-count">0</span>
-                </a>
-                <a href="#"><i class="fa-solid fa-user"></i></a>
-            </div>
-
-        </div>
-    </nav>
-
-    <!-- OPTIONAL EXPAND SEARCH BAR -->
-    <div id="search-bar" class="search-bar">
-        <input type="text" placeholder="Search for products..." id="search-input">
-        <button id="close-search"><i class="fa-solid fa-times"></i></button>
-    </div>
-</header>
+    <script src="/components/js/header.js"></script>
     <script src="/components/js/mobile-nav.js"></script>
     
 

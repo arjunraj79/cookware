@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/components/js/head.js"></script>
+    <style>
+        /* Table styling */
+        .certification-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            font-size: 15px;
+        }
+
+        .certification-table th {
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .certification-table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .certification-table tbody tr:hover {
+            background: #fff8e1;
+        }
+
+        .certification-table td:first-child {
+            text-align: center;
+            width: 60px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .certification-table thead {
+                display: none;
+            }
+
+            .certification-table tr {
+                display: block;
+                margin-bottom: 15px;
+                border: 1px solid #eee;
+                padding: 10px;
+                border-radius: 6px;
+            }
+
+            .certification-table td {
+                display: flex;
+                justify-content: space-between;
+                padding: 8px 5px;
+                border-bottom: 1px dashed #ddd;
+            }
+
+            .certification-table td:last-child {
+                border-bottom: none;
+            }
+
+            .certification-table td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: #333;
+            }
+
+            .certification-table td:first-child {
+                text-align: left;
+                width: 100%;
+            }
+        }
+
+        .repair-img {
+            display: block;
+            width: 100%;
+            max-width: 420px;
+            margin: 18px auto;
+            border: 1px solid #ccc;
+            padding: 6px;
+            border-radius: 6px;
+            background: #fafafa;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            object-fit: contain;
+        }
+
+        @media (max-width: 600px) {
+            .repair-img {
+                max-width: 100%;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script src="/components/js/header.js"></script>
+    <script src="/components/js/mobile-nav.js"></script>
+
+    <main class="about-page-wrapper">
+        <aside class="sidebar-nav">
+            <div class="sidebar-header">PRESSURE COOKER GUIDE</div>
+            <ul>
+                <li><a href="/benefits-what-is-pressure-cooking.html">What is Pressure Cooking?</a></li>
+                <li><a href="/benefits-of-ons.html">The Benefits of ONS</a></li>
+                <li><a href="/benefits-advantages.html">Advantages of ONS</a></li>
+                <li><a href="/benefits-safeguards.html">Important Safeguards</a></li>
+                <li><a href="/benefits-know-your-ons.html">Know Your ONS</a></li>
+                <li><a href="/benefits-trial-run.html">Trial Run</a></li>
+                <li><a href="/benefits-easy-tips.html">Easy Tips for Better Cooking</a></li>
+                <li><a href="/benefits-care-cleaning.html">Care & Cleaning</a></li>
+                <li><a href="/benefits-certification.html" class="active">Product Certification</a></li>
+                <li><a href="/benefits-diy-repairs.html">Do-it-Yourself Repairs</a></li>
+            </ul>
+        </aside>
+
+        <section class="about-company-content">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <small>
+                    <b>YOU ARE HERE:</b>&nbsp;
+                    <a href="/index.html">Home</a>&nbsp;&nbsp;<b>&gt;</b>&nbsp;
+                    <a href="/benefits-what-is-pressure-cooking.html">Pressure Cooker Guide</a>&nbsp;&nbsp;<b>&gt;</b>&nbsp;
+                    <span class="current">Product Certification</span>
+                </small>
+            </div>
+
+            <h2>Product Certification</h2>
+
+            <h4>UNDERWRITERS LABORATORIES INC (UL)</h4>
+            <p>
+                Pressure cookers with the UL Mark and listed by Underwriters Laboratories Inc. (UL) are manufactured by ONS Cookers. 
+                UL is a global safety analysis and certification body founded in 1894, headquartered in Chicago. 
+                Its mark signifies rigid safety compliance and ongoing inspections.
+            </p>
+
+            <h5>INNER-LID Models of Pressure Cookers Approved by UL</h5>
+
+            <table class="certification-table">
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Brand</th>
+                        <th>Approved Models</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td data-label="S.No.">1</td><td data-label="Brand">ONS PEXA Pressure Cookers</td><td data-label="Approved Models">1.5L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">2</td><td data-label="Brand">ONS PEXA Induction Compatible Pressure Cookers</td><td data-label="Approved Models">1.5L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">3</td><td data-label="Brand">ONS MEXA Pressure Cookers</td><td data-label="Approved Models">2L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">4</td><td data-label="Brand">ONS MEXA Hard Anodised Pressure Cookers</td><td data-label="Approved Models">2L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">5</td><td data-label="Brand">ONS MEXA Induction Compatible Pressure Cookers</td><td data-label="Approved Models">2L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">6</td><td data-label="Brand">ONS MEXA Induction Compatible Hard Anodised Pressure Cookers</td><td data-label="Approved Models">2L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">7</td><td data-label="Brand">ONS MEXA Induction Compatible Stainless Steel Pressure Cookers</td><td data-label="Approved Models">3L and 5L</td></tr>
+                    <tr><td data-label="S.No.">8</td><td data-label="Brand">ONS MEXA Induction Compatible TRI-PLY Pressure Cookers</td><td data-label="Approved Models">3L and 5L</td></tr>
+                    <tr><td data-label="S.No.">9</td><td data-label="Brand">ONS Big PEXA Pressure Cookers</td><td data-label="Approved Models">8L to 15L</td></tr>
+                    <tr><td data-label="S.No.">10</td><td data-label="Brand">ONS HEXA Pressure Cookers</td><td data-label="Approved Models">3L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">11</td><td data-label="Brand">ONS HEXA Induction Compatible Pressure Cookers</td><td data-label="Approved Models">3L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">12</td><td data-label="Brand">ONS HEXA Hard Anodised Pressure Cookers</td><td data-label="Approved Models">3L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">13</td><td data-label="Brand">ONS BIG MEXA Pressure Cookers</td><td data-label="Approved Models">8L to 12L</td></tr>
+                    <tr><td data-label="S.No.">14</td><td data-label="Brand">ONS PEXA Hard Anodised Pressure Cookers</td><td data-label="Approved Models">1.5L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">15</td><td data-label="Brand">ONS PEXA Induction Compatible Hard Anodised Pressure Cookers</td><td data-label="Approved Models">1.5L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">16</td><td data-label="Brand">ONS HEXA Induction Compatible Hard Anodised Pressure Cookers</td><td data-label="Approved Models">3L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">17</td><td data-label="Brand">ONS BIG MEXA Hard Anodised Pressure Cookers</td><td data-label="Approved Models">8L to 12L</td></tr>
+                </tbody>
+            </table>
+
+            <h4>BUREAU OF INDIAN STANDARDS (BIS)</h4>
+            <p>
+                The Bureau of Indian Standards (BIS) operates a certification scheme allowing manufacturers to use the ISI Mark, 
+                assuring consumers of product safety, quality, and reliability.
+            </p>
+
+            <h5>INNER-LID Pressure Cooker Models Certified by BIS</h5>
+
+            <table class="certification-table">
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Brand</th>
+                        <th>Approved Models</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td data-label="S.No.">1</td><td data-label="Brand">ONS PEXA Pressure Cookers</td><td data-label="Approved Models">1.5L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">2</td><td data-label="Brand">ONS PEXA Induction Compatible Pressure Cookers</td><td data-label="Approved Models">1.5L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">3</td><td data-label="Brand">ONS MEXA Pressure Cookers</td><td data-label="Approved Models">2L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">4</td><td data-label="Brand">ONS MEXA Hard Anodised Pressure Cookers</td><td data-label="Approved Models">2L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">5</td><td data-label="Brand">ONS MEXA Induction Compatible Pressure Cookers</td><td data-label="Approved Models">2L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">6</td><td data-label="Brand">ONS MEXA Induction Compatible Hard Anodised Pressure Cookers</td><td data-label="Approved Models">2L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">7</td><td data-label="Brand">ONS MEXA Induction Compatible Stainless Steel Pressure Cookers</td><td data-label="Approved Models">3L and 5L</td></tr>
+                    <tr><td data-label="S.No.">8</td><td data-label="Brand">ONS MEXA Induction Compatible TRI-PLY Pressure Cookers</td><td data-label="Approved Models">3L and 5L</td></tr>
+                    <tr><td data-label="S.No.">9</td><td data-label="Brand">ONS Big PEXA Pressure Cookers</td><td data-label="Approved Models">8L to 15L</td></tr>
+                    <tr><td data-label="S.No.">10</td><td data-label="Brand">ONS HEXA Pressure Cookers</td><td data-label="Approved Models">3L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">11</td><td data-label="Brand">ONS HEXA Induction Compatible Pressure Cookers</td><td data-label="Approved Models">3L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">12</td><td data-label="Brand">ONS HEXA Hard Anodised Pressure Cookers</td><td data-label="Approved Models">3L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">13</td><td data-label="Brand">ONS BIG MEXA Pressure Cookers</td><td data-label="Approved Models">8L to 12L</td></tr>
+                    <tr><td data-label="S.No.">14</td><td data-label="Brand">ONS PEXA Hard Anodised Pressure Cookers</td><td data-label="Approved Models">1.5L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">15</td><td data-label="Brand">ONS PEXA Induction Compatible Hard Anodised Pressure Cookers</td><td data-label="Approved Models">1.5L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">16</td><td data-label="Brand">ONS HEXA Induction Compatible Hard Anodised Pressure Cookers</td><td data-label="Approved Models">3L to 6.5L</td></tr>
+                    <tr><td data-label="S.No.">17</td><td data-label="Brand">ONS BIG MEXA Hard Anodised Pressure Cookers</td><td data-label="Approved Models">8L to 12L</td></tr>
+                </tbody>
+            </table>
+
+            <h3>PARTS FOR VARIOUS PRODUCTS</h3>
+            <h4>ONS HEXA, PEXA & MEXA MODELS</h4>
+            <h4>ONS HARD ANODISED PEXA & MEXA MODELS</h4>
+            <h4>ONS STAINLESS STEEL & TRI-PLY MEXA MODELS</h4>
+            <img src="/assets/img/how-to-use/20.jpeg" alt="ONS HEXA, PEXA & MEXA Models" class="repair-img">
+            <img src="/assets/img/how-to-use/21.jpeg" alt="ONS Hard Anodised PEXA & MEXA Models" class="repair-img">
+            <img src="/assets/img/how-to-use/22.jpeg" alt="ONS Stainless Steel Models" class="repair-img">
+            <img src="/assets/img/how-to-use/23.jpeg" alt="ONS TRI-PLY MEXA Models" class="repair-img">
+            <h4>ONS Big PEXA & MEXA</h4>
+            <p>ONS HARD ANODISED Big MEXA</p>
+            <img src="/assets/img/how-to-use/24.jpeg" alt="ONS Big PEXA & MEXA" class="repair-img">
+        </section>
+    </main>
+
+    <footer>
+        <script src="/components/js/footer.js"></script>
+    </footer>
+
+    <button id="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="main.js"></script>
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <div class="nav-row">
+            <a href="#" class="mobile-menu"><i class="fa-solid fa-bars"></i><span>Menu</span></a>
+            <a href="cart.html" class="mobile-cart"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+            <a href="index.html" class="mobile-home"><i class="fa-solid fa-home"></i><span>Home</span></a>
+            <a href="#" class="mobile-login"><i class="fa-solid fa-user"></i><span>Profile</span></a>
+        </div>
+    </nav>
+</body>
+</html>
