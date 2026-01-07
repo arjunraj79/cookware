@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <ul class="mobile-nav-links">
-        <li><a href="/index.html">Home</a></li>
-
         <li class="has-submenu">
           <a href="#">Products <i class="fa-solid fa-chevron-right"></i></a>
           <div class="submenu-panel">
@@ -21,25 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a href="/products.html?cat=cookware">
                   <div class="img-placeholder"></div>
                   <span>Cookware</span>
-                </a>
-              </li>
-              <li>
-                <a href="/products.html?cat=frying-pan">
-                  <div class="img-placeholder"></div>
-                  <span>Frying Pan</span>
-                </a>
-              </li>
-              <li>
-                <a href="/products.html?cat=tava">
-                  <div class="img-placeholder"></div>
-                  <span>Tava</span>
-                </a>
-              </li>
-              <li>
-                <a href="/products.html?cat=deep-fry-pan">
-                  <div class="img-placeholder"></div>
-                  <span>Deep Fry Pan</span>
-                </a>
+                </a>  
               </li>
               <li>
                 <a href="/products.html?cat=sets">
@@ -54,18 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 </a>
               </li>
               <li>
-                <a href="/products.html?cat=handi">
-                  <div class="img-placeholder"></div>
-                  <span>Handi</span>
-                </a>
-              </li>
-              <li>
-                <a href="/products.html?cat=electricals">
-                  <div class="img-placeholder"></div>
-                  <span>Electricals</span>
-                </a>
-              </li>
-              <li>
                 <a href="/products.html?cat=accessories">
                   <div class="img-placeholder"></div>
                   <span>Parts & Accessories</span>
@@ -74,10 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </ul>
           </div>
         </li>
-
-        <li><a href="/about.html">About Us</a></li>
         <li><a href="/contact-us.html">Contact Us</a></li>
-        <li><a href="/benefits-of-pressure-cooking.html">Almanac of Pressure Cooking</a></li>
       </ul>
     </div>
   `;
@@ -105,45 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
           </a>
         </li>
         <li>
-          <a href="/products.html?cat=frying-pan">
-            <div class="img-placeholder"></div>
-            <span>Frying Pan</span>
-          </a>
-        </li>
-        <li>
-          <a href="/products.html?cat=tava">
-            <div class="img-placeholder"></div>
-            <span>Tava</span>
-          </a>
-        </li>
-        <li>
-          <a href="/products.html?cat=deep-fry-pan">
-            <div class="img-placeholder"></div>
-            <span>Deep Fry Pan</span>
-          </a>
-        </li>
-        <li>
           <a href="/products.html?cat=sets">
             <div class="img-placeholder"></div>
             <span>Sets</span>
-          </a>
-        </li>
-        <li>
-          <a href="/products.html?cat=saucepan">
-            <div class="img-placeholder"></div>
-            <span>Saucepan</span>
-          </a>
-        </li>
-        <li>
-          <a href="/products.html?cat=handi">
-            <div class="img-placeholder"></div>
-            <span>Handi</span>
-          </a>
-        </li>
-        <li>
-          <a href="/products.html?cat=electricals">
-            <div class="img-placeholder"></div>
-            <span>Electricals</span>
           </a>
         </li>
         <li>
