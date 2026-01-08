@@ -42,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </ul>
           </div>
         </li>
+        <li><a href="/benefits-of-pressure-cooking.html">Almanac of Pressure Cooker</a></li>
+        <li><a href="/benefits-certification.html">Parts of Pressure Cooker</a></li>
         <li><a href="/contact-us.html">Contact Us</a></li>
       </ul>
     </div>

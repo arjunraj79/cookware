@@ -24,13 +24,108 @@
         </section>
 
         <section class="product-hero" style="padding:0 2rem 2rem 2rem;">
-            <div class="slider" id="product-slider" style="position:relative;overflow:hidden;border-radius:8px;">
-                <div class="slides" style="display:flex;transition:transform 0.5s ease;">
-                    <!-- images will be injected here -->
+            <style>
+                .product-carousel {
+                    height: 400px;
+                    touch-action: pan-y;
+                    cursor: grab;
+                    overflow: hidden;
+                    position: relative;
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                .product-carousel.grabbing {
+                    cursor: grabbing;
+                }
+                .product-carousel-track {
+                    position: absolute;
+                    display: flex;
+                    height: 100%;
+                    transition: transform 0.3s ease-out;
+                    will-change: transform;
+                }
+                .product-carousel.dragging .product-carousel-track {
+                    transition: none;
+                }
+                .product-carousel-slide {
+                    flex-shrink: 0;
+                    width: 380px;
+                    height: 380px;
+                    margin-right: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #fff;
+                    border-radius: 8px;
+                    overflow: hidden;
+                }
+                .product-carousel-slide img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    display: block;
+                    pointer-events: none;
+                    user-select: none;
+                }
+                .product-carousel-slide.video-slide {
+                    padding: 20px;
+                    background: #f5f5f5;
+                }
+                .product-carousel-slide.video-slide iframe {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 8px;
+                    border: none;
+                }
+                .carousel-dots {
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+                    margin-top: 15px;
+                }
+                .carousel-dot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: #ccc;
+                    border: none;
+                    cursor: pointer;
+                    transition: background 0.3s, transform 0.2s;
+                }
+                .carousel-dot.active {
+                    background: #333;
+                    transform: scale(1.2);
+                }
+                .carousel-dot:hover {
+                    background: #999;
+                }
+                @media (max-width: 768px) {
+                    .product-carousel {
+                        height: 320px;
+                    }
+                    .product-carousel-slide {
+                        width: 280px;
+                        height: 280px;
+                        margin-right: 10px;
+                    }
+                }
+                @media (max-width: 480px) {
+                    .product-carousel {
+                        height: 280px;
+                    }
+                    .product-carousel-slide {
+                        width: 240px;
+                        height: 240px;
+                    }
+                }
+            </style>
+            <div class="product-carousel" id="product-slider">
+                <div class="product-carousel-track" id="carousel-track">
+                    <!-- slides will be injected here -->
                 </div>
-                <button class="slider-prev" aria-label="Previous" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:0.6rem 0.8rem;border-radius:6px;cursor:pointer;"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="slider-next" aria-label="Next" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:0.6rem 0.8rem;border-radius:6px;cursor:pointer;"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
+            <div class="carousel-dots" id="carousel-dots"></div>
         </section>
 
         <section class="product-details" style="padding:2rem;">
@@ -135,21 +230,154 @@
           const specsEl = document.getElementById('product-specs');
           if(specsEl){ specsEl.innerHTML = ''; if(product.specs){ Object.keys(product.specs).forEach(k => { const li = document.createElement('li'); li.innerHTML = '<strong>' + k + ':</strong> ' + product.specs[k]; specsEl.appendChild(li); }); } }
 
-          // images into slider
-          const slider = document.getElementById('product-slider');
-          const slides = slider.querySelector('.slides');
-          slides.innerHTML = '';
-                    (product.images||[]).forEach(src => {
-                        const img = document.createElement('img');
-                        const imgSrc = (src && (src.startsWith('/') || src.startsWith('http'))) ? src : ('../' + src);
-                        img.src = imgSrc;
-                        img.alt = product.title || '';
-                        img.style.width = '100%';
-                        img.style.flexShrink = '0';
-                        img.style.objectFit = 'contain';
-                        img.style.height = '60vh';
-                        slides.appendChild(img);
-                    });
+          // Build slides for new carousel
+          const carousel = document.getElementById('product-slider');
+          const track = document.getElementById('carousel-track');
+          const dotsContainer = document.getElementById('carousel-dots');
+          track.innerHTML = '';
+          dotsContainer.innerHTML = '';
+          
+          const allMedia = [];
+          
+          // Add images
+          (product.images || []).forEach(src => {
+              const imgSrc = (src && (src.startsWith('/') || src.startsWith('http'))) ? src : ('../' + src);
+              allMedia.push({ type: 'image', src: imgSrc });
+          });
+          
+          // Add video if exists
+          if (product.video) {
+              allMedia.push({ type: 'video', src: product.video });
+          }
+          
+          // Create slides and dots
+          allMedia.forEach((media, index) => {
+              const slide = document.createElement('div');
+              slide.className = 'product-carousel-slide' + (media.type === 'video' ? ' video-slide' : '');
+              
+              if (media.type === 'image') {
+                  const img = document.createElement('img');
+                  img.src = media.src;
+                  img.alt = product.title || '';
+                  img.draggable = false;
+                  slide.appendChild(img);
+              } else if (media.type === 'video') {
+                  const iframe = document.createElement('iframe');
+                  iframe.src = media.src;
+                  iframe.allowFullscreen = true;
+                  iframe.setAttribute('frameborder', '0');
+                  slide.appendChild(iframe);
+              }
+              
+              track.appendChild(slide);
+              
+              // Create dot
+              const dot = document.createElement('button');
+              dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+              dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
+              dot.dataset.index = index;
+              dotsContainer.appendChild(dot);
+          });
+          
+          // Carousel drag functionality
+          let isDragging = false;
+          let startX = 0;
+          let currentTranslate = 0;
+          let prevTranslate = 0;
+          let currentIndex = 0;
+          const slideCount = allMedia.length;
+          
+          function getSlideWidth() {
+              const slide = track.querySelector('.product-carousel-slide');
+              if (!slide) return 395;
+              return slide.offsetWidth + 15; // width + margin
+          }
+          
+          function setPositionByIndex(animate = true) {
+              if (!animate) {
+                  track.style.transition = 'none';
+              } else {
+                  track.style.transition = 'transform 0.3s ease-out';
+              }
+              const slideWidth = getSlideWidth();
+              const carouselWidth = carousel.offsetWidth;
+              const centerOffset = (carouselWidth - slideWidth + 15) / 2;
+              currentTranslate = centerOffset - (currentIndex * slideWidth);
+              prevTranslate = currentTranslate;
+              track.style.transform = 'translateX(' + currentTranslate + 'px)';
+              
+              // Update dots
+              document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                  dot.classList.toggle('active', i === currentIndex);
+              });
+          }
+          
+          function touchStart(e) {
+              isDragging = true;
+              startX = getPositionX(e);
+              carousel.classList.add('dragging', 'grabbing');
+          }
+          
+          function touchMove(e) {
+              if (!isDragging) return;
+              const currentX = getPositionX(e);
+              const diff = currentX - startX;
+              currentTranslate = prevTranslate + diff;
+              track.style.transform = 'translateX(' + currentTranslate + 'px)';
+          }
+          
+          function touchEnd() {
+              isDragging = false;
+              carousel.classList.remove('dragging', 'grabbing');
+              
+              const movedBy = currentTranslate - prevTranslate;
+              const slideWidth = getSlideWidth();
+              
+              // Determine direction and snap
+              if (movedBy < -50 && currentIndex < slideCount - 1) {
+                  currentIndex++;
+              } else if (movedBy > 50 && currentIndex > 0) {
+                  currentIndex--;
+              }
+              
+              setPositionByIndex();
+          }
+          
+          function getPositionX(e) {
+              return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+          }
+          
+          // Mouse events
+          carousel.addEventListener('mousedown', touchStart);
+          carousel.addEventListener('mousemove', touchMove);
+          carousel.addEventListener('mouseup', touchEnd);
+          carousel.addEventListener('mouseleave', () => {
+              if (isDragging) touchEnd();
+          });
+          
+          // Touch events
+          carousel.addEventListener('touchstart', touchStart, { passive: true });
+          carousel.addEventListener('touchmove', touchMove, { passive: true });
+          carousel.addEventListener('touchend', touchEnd);
+          
+          // Prevent context menu on long press
+          carousel.addEventListener('contextmenu', e => e.preventDefault());
+          
+          // Dot click navigation
+          dotsContainer.addEventListener('click', (e) => {
+              if (e.target.classList.contains('carousel-dot')) {
+                  currentIndex = parseInt(e.target.dataset.index);
+                  setPositionByIndex();
+              }
+          });
+          
+          // Initialize position
+          if (slideCount > 0) {
+              setTimeout(() => setPositionByIndex(false), 50);
+          }
+          
+          // Handle resize
+          window.addEventListener('resize', () => setPositionByIndex(false));
 
                     // related: `product.related` may be an array of ids (strings) or objects with an `id`.
                     const relatedGrid = document.getElementById('related-products-grid');
@@ -174,19 +402,6 @@
                         card.innerHTML = '<a href="'+productUrl+'"><img src="'+relatedImg+'" alt="'+(relProduct.title||'')+'"></a><h3>'+ (relProduct.title||'') +'</h3><p>₹'+(relProduct.price||'0')+'</p><button class="btn-secondary">Add to Cart</button>';
                         relatedGrid.appendChild(card);
                     });
-
-          // slider controls (basic)
-          const imgs = slides.querySelectorAll('img');
-          const prev = slider.querySelector('.slider-prev');
-          const next = slider.querySelector('.slider-next');
-          let index = 0;
-          const total = Math.max(1, imgs.length);
-          function show(i){ slides.style.transform = 'translateX(-' + (i * 100) + '%)'; }
-          if(prev) prev.addEventListener('click', ()=>{ index = (index - 1 + total) % total; show(index); });
-          if(next) next.addEventListener('click', ()=>{ index = (index + 1) % total; show(index); });
-          let interval = setInterval(()=>{ index = (index + 1) % total; show(index); }, 4000);
-          slider.addEventListener('mouseenter', ()=> clearInterval(interval));
-          slider.addEventListener('mouseleave', ()=> interval = setInterval(()=>{ index = (index + 1) % total; show(index); }, 4000));
 
           // cart actions reuse existing add to cart logic
                 const productDataForCart = { id: product.id, name: product.title, price: product.price, image: (product.images && product.images[0]) ? ((product.images[0].startsWith('/') || product.images[0].startsWith('http')) ? product.images[0] : ('../' + product.images[0])) : '' };

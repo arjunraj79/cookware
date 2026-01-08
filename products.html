@@ -313,16 +313,19 @@
     (function(){
       // Define product categories/series with images
       const categories = [
-        { id: 'pexa', name: 'PEXA', image: 'assets/img/Product Images/Steelbird pexa 3 ltr.jpg', prefix: 'SBP', excludePrefix: ['SBPIB'] },
-        { id: 'pexa-ib', name: 'PEXA Induction Base', image: 'assets/img/Product Images/Steelbird pexa Induction base 3 ltr.jpeg', prefix: 'SBPIB', excludePrefix: ['SBPIB1.5LB', 'SBPIB3LB', 'SBPIB5LB'] },
-        { id: 'big-pexa', name: 'Big PEXA', image: 'assets/img/Product Images/Steelbird big pexa 10 ltr.jpeg', ids: ['SBP8L', 'SBP10L', 'SBP12L', 'SBP15L'] },
-        { id: 'mexa', name: 'MEXA', image: 'assets/img/Product Images/Steelbird mexa 3.5 ltr.jpeg', prefix: 'SBM', excludePrefix: ['SBMIB', 'SBM2LB', 'SBM3.5LB', 'SBM4LB', 'SBM5.5LB', 'SBM6.5LB', 'SBM2LS', 'SBM3.5LS', 'SBM4LS', 'SBM5.5LS', 'SBM6.5LS'] },
-        { id: 'mexa-ib', name: 'MEXA Induction Base', image: 'assets/img/Product Images/Steelbird mexa induction base 3.5 ltr.jpeg', prefix: 'SBMIB', excludePrefix: ['SBMIB2LB', 'SBMIB3.5LB', 'SBMIB4LB', 'SBMIB5.5LB', 'SBMIB6.5LB', 'SBMIB2LS', 'SBMIB3.5LS', 'SBMIB4LS', 'SBMIB5.5LS', 'SBMIB6.5LS'] },
-        { id: 'pexa-black', name: 'PEXA Black IB', image: 'assets/img/Product Images/Steelbird pexa black ib black lid 3ltr.jpeg', ids: ['SBPIB1.5LB', 'SBPIB3LB', 'SBPIB5LB'] },
-        { id: 'mexa-black', name: 'MEXA Black', image: 'assets/img/Product Images/Steelbird mexa black ib with black lid 3.5 ltr.jpeg', ids: ['SBM2LB', 'SBM3.5LB', 'SBM4LB', 'SBM5.5LB', 'SBM6.5LB'] },
-        { id: 'mexa-black-ib', name: 'MEXA Black IB', image: 'assets/img/Product Images/Steelbird mexa black ib with black lid 3.5 ltr.jpeg', ids: ['SBMIB2LB', 'SBMIB3.5LB', 'SBMIB4LB', 'SBMIB5.5LB', 'SBMIB6.5LB'] },
-        { id: 'mexa-ss-lid', name: 'MEXA Black with SS Lid', image: 'assets/img/Product Images/Steelbird mexa black with ss lid 3.5 ltr.jpeg', ids: ['SBM2LS', 'SBM3.5LS', 'SBM4LS', 'SBM5.5LS', 'SBM6.5LS'] },
-        { id: 'mexa-ib-ss-lid', name: 'MEXA Black IB with SS Lid', image: 'assets/img/Product Images/Steelbird mexa black ib with ss lid 3.5 ltr.jpeg', ids: ['SBMIB2LS', 'SBMIB3.5LS', 'SBMIB4LS', 'SBMIB5.5LS', 'SBMIB6.5LS'] }
+        { id: 'pexa', name: 'Steel Bird PEXA', image: 'assets/img/Product Images/Steelbird pexa 3 ltr.jpg', prefix: 'SBP', excludePrefix: ['SBPIB', 'SBP8L', 'SBP10L', 'SBP12L', 'SBP15L'] },
+        { id: 'pexa-ib', name: 'Steel Bird PEXA Induction Base', image: 'assets/img/Product Images/Steelbird pexa Induction base 3 ltr.jpeg', prefix: 'SBPIB', excludePrefix: ['SBPIB1.5LB', 'SBPIB3LB', 'SBPIB5LB'] },
+        { id: 'mexa', name: 'Steel Bird MEXA', image: 'assets/img/Product Images/Steelbird mexa 3.5 ltr.jpeg', prefix: 'SBM', excludePrefix: ['SBMIB', 'SBM2LB', 'SBM3.5LB', 'SBM4LB', 'SBM5.5LB', 'SBM6.5LB', 'SBM2LS', 'SBM3.5LS', 'SBM4LS', 'SBM5.5LS', 'SBM6.5LS', 'SBMS', 'SBMT'] },
+        { id: 'mexa-ib', name: 'Steel Bird MEXA Induction Base', image: 'assets/img/Product Images/Steelbird mexa induction base 3.5 ltr.jpeg', prefix: 'SBMIB', excludePrefix: ['SBMIB2LB', 'SBMIB3.5LB', 'SBMIB4LB', 'SBMIB5.5LB', 'SBMIB6.5LB', 'SBMIB2LS', 'SBMIB3.5LS', 'SBMIB4LS', 'SBMIB5.5LS', 'SBMIB6.5LS'] },
+        { id: 'big-pexa', name: 'Steel Bird Big PEXA', image: 'assets/img/Product Images/Steelbird big pexa 10 ltr.jpeg', ids: ['SBP8L', 'SBP10L', 'SBP12L', 'SBP15L'] },
+        { id: 'pexa-black', name: 'Steel Bird PEXA Black Induction Base', image: 'assets/img/Product Images/Steelbird pexa black ib black lid 3ltr.jpeg', ids: ['SBPIB1.5LB', 'SBPIB3LB', 'SBPIB5LB'] },
+        { id: 'mexa-black', name: 'Steel Bird Advocate MEXA Black', image: 'assets/img/Product Images/Steelbird mexa black ib with black lid 3.5 ltr.jpeg', ids: ['SBM2LB', 'SBM3.5LB', 'SBM4LB', 'SBM5.5LB', 'SBM6.5LB'] },
+        { id: 'mexa-black-ib', name: 'Steel Bird Advocate MEXA Black Induction Base', image: 'assets/img/Product Images/Steelbird mexa black ib with black lid 3.5 ltr.jpeg', ids: ['SBMIB2LB', 'SBMIB3.5LB', 'SBMIB4LB', 'SBMIB5.5LB', 'SBMIB6.5LB'] },
+        { id: 'mexa-ss-lid', name: 'Steel Bird MEXA Black with Stainless Steel Lid', image: 'assets/img/Product Images/Steelbird mexa black with ss lid 3.5 ltr.jpeg', ids: ['SBM2LS', 'SBM3.5LS', 'SBM4LS', 'SBM5.5LS', 'SBM6.5LS'] },
+        { id: 'mexa-ib-ss-lid', name: 'Steel Bird MEXA Black Induction Base with Stainless Steel Lid', image: 'assets/img/Product Images/Steelbird mexa black ib with ss lid 3.5 ltr.jpeg', ids: ['SBMIB2LS', 'SBMIB3.5LS', 'SBMIB4LS', 'SBMIB5.5LS', 'SBMIB6.5LS'] },
+        { id: 'ss-mexa', name: 'Steel Bird Stainless Steel MEXA', image: '/assets/img/products images/STEELBIRD STAINLESS STEEL MEXA 3ltr.jpg', ids: ['SBMS3L', 'SBMS5L'] },
+        { id: 'triply-mexa', name: 'Steel Bird TRI-PLY MEXA', image: '/assets/img/products images/STEELBIRD TRI-PLY MEXA 3ltr_1 copy.jpg', ids: ['SBMT3L', 'SBMT5L'] },
+        
       ];
 
       let allProducts = [];
@@ -425,7 +428,7 @@
           const img = (p.images && p.images[0]) ? p.images[0] : 'assets/img/Product Images/default.png';
           const capacity = extractCapacity(p.title);
           const originalPrice = getOriginalPrice(p.price);
-          const productName = p.title.replace(/Steelbird\s*/i, '').trim();
+          const productName = p.title.replace(/Steel\s*Bird\s*/i, '').trim();
 
           return `
             <div class="product-tile">

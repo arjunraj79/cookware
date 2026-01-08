@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="footer-links-area">
             <ul class="footer-col">
               <li><h6>Company</h6></li>
-              <li><a href="/about.html">About Us</a></li>
+              <li><a href="/about.html">Profile</a></li>
               <li><a href="/products.html">Our Products</a></li>
               <li><a href="/benefits-of-pressure-cooking.html">Almanac of Pressure Cooker</a></li>
               <li><a href="/blog.html">Blog</a></li>
