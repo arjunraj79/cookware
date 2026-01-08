@@ -3,7 +3,13 @@
     "id": "SBP1.5L",
     "title": "Steel Bird PEXA 1.5L",
     "price": 1180,
-    "images": ["assets/img/Product Images/Steelbird pexa 1.5 ltr.jpg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 1.5 ltr/1_Steelbird pexa 1.5 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 1.5 ltr/2_Steelbird pexa 1.5 ltr.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 1.5 ltr/3_STEELBIRD PEXA 1.5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 1.5 ltr/4_STEELBIRD PEXA 1.5ltr copy.png",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 1.5 ltr/5_STEELBIRD PEXA 1.5ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Steel Bird PEXA 1.5L pressure cooker. Compact and durable.</p>",
     "features": [],
     "specs": {
@@ -21,7 +27,12 @@
     "id": "SBP2L",
     "title": "Steel Bird PEXA 2L",
     "price": 1280,
-    "images": ["assets/img/Product Images/Steelbird pexa 2 ltr.jpg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 2ltr/1_Steelbird pexa 2ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 2ltr/2_STEELBIRD PEXA 2ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 2ltr/3_STEELBIRD PEXA 2ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 2ltr/4_STEELBIRD PEXA 2ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Steel Bird PEXA 2L pressure cooker.</p>",
     "features": [],
     "specs": {
@@ -39,7 +50,13 @@
     "id": "SBP3L",
     "title": "Steel Bird PEXA 3L",
     "price": 1580,
-    "images": ["assets/img/Product Images/Steelbird pexa 3 ltr.jpg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 3ltr/1_Steelbird pexa 3ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 3ltr/2_Steelbird pexa 3ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 3ltr/3_Steelbird pexa 3ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 3ltr/4_Steelbird pexa 3ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 3ltr/6_Steelbird pexa 3ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Steel Bird PEXA 3L pressure cooker.</p>",
     "features": [],
     "specs": {
@@ -57,7 +74,11 @@
     "id": "SBP3.5L",
     "title": "Steel Bird PEXA 3.5L",
     "price": 1730,
-    "images": ["assets/img/Product Images/Steelbird pexa 3.5 ltr.jpg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 3.5ltr/1_Steelbird pexa 3.5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 3.5ltr/2_Steelbird pexa 3.5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 3.5ltr/4_Steelbird pexa 3.5ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Steel Bird PEXA 3.5L pressure cooker.</p>",
     "features": [],
     "specs": {
@@ -75,7 +96,12 @@
     "id": "SBP5L",
     "title": "Steel Bird PEXA 5L",
     "price": 1930,
-    "images": ["assets/img/Product Images/Steelbird pexa 5 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 5ltr/1_Steelbird pexa 5ltr copy.jpeg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 5ltr/2_Steelbird pexa 5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 5ltr/3_Steelbird pexa 5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 5ltr/4_Steelbird pexa 5ltr copy 2.jpg"
+    ],
     "descriptionHtml": "<p>Steel Bird PEXA 5L pressure cooker.</p>",
     "features": [],
     "specs": {
@@ -93,7 +119,11 @@
     "id": "SBP6.5L",
     "title": "Steel Bird PEXA 6.5L",
     "price": 2230,
-    "images": ["assets/img/Product Images/Steelbird pexa 6.5 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 6.5ltr/1_Steelbird pexa 6.5 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 6.5ltr/2_Steelbird pexa 6.5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA/Steelbird Pexa 6.5ltr/4_Steelbird pexa 6.5ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Steel Bird PEXA 6.5L pressure cooker.</p>",
     "features": [],
     "specs": {
@@ -111,7 +141,12 @@
     "id": "SBPIB1.5L",
     "title": "Steel Bird PEXA Induction Base 1.5L",
     "price": 1280,
-    "images": ["assets/img/Product Images/Steelbird pexa Induction base 1.5 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 1.5 ltr/1_Steelbird pexa Induction base 1.5 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 1.5 ltr/2_Steelbird pexa Induction base 1.5 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 1.5 ltr/4_Steelbird pexa Induction base 1.5 ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 1.5 ltr/6_Steelbird pexa Induction base 1.5 ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Induction base variant.</p>",
     "features": [],
     "specs": {
@@ -129,7 +164,12 @@
     "id": "SBPIB2L",
     "title": "Steel Bird PEXA Induction Base 2L",
     "price": 1430,
-    "images": ["assets/img/Product Images/Steelbird pexa Induction base 2 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 2ltr/2_Steelbird pexa Induction base 2ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 2ltr/3_Steelbird pexa Induction base 2ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 2ltr/4_Steelbird pexa Induction base 2ltr.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 2ltr/5_Steelbird pexa Induction base 2ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Induction base variant.</p>",
     "features": [],
     "specs": {
