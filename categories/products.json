@@ -187,7 +187,13 @@
     "id": "SBPIB3L",
     "title": "Steel Bird PEXA Induction Base 3L",
     "price": 1680,
-    "images": ["assets/img/Product Images/Steelbird pexa Induction base 3 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 3ltr/2_Steelbird pexa Induction base 3ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 3ltr/3_Steelbird pexa Induction base 3ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 3ltr/4_Steelbird pexa Induction base 3ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 3ltr/5_Steelbird pexa Induction base 3ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 3ltr/7_Steelbird pexa Induction base 3ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Induction base variant.</p>",
     "features": [],
     "specs": {
@@ -223,7 +229,12 @@
     "id": "SBPIB5L",
     "title": "Steel Bird PEXA Induction Base 5L",
     "price": 2030,
-    "images": ["assets/img/Product Images/Steelbird pexa Induction base 5 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 5ltr/1_Steelbird pexa Induction base 5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 5ltr/3_Steelbird pexa Induction base 5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 5ltr/4_Steelbird pexa Induction base 5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 5ltr/5_Steelbird pexa Induction base 5ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Induction base variant.</p>",
     "features": [],
     "specs": {
