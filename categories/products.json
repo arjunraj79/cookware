@@ -211,7 +211,11 @@
     "id": "SBPIB3.5L",
     "title": "Steel Bird PEXA Induction Base 3.5L",
     "price": 1830,
-    "images": ["assets/img/Product Images/Steelbird pexa Induction base 3.5 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steel Bird PEXA Induction Base 3.5ltr/1_Steelbird pexa Induction base 3.5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steel Bird PEXA Induction Base 3.5ltr/3_Steelbird pexa Induction base 3.5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steel Bird PEXA Induction Base 3.5ltr/5_Steelbird pexa Induction base 3.5ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Induction base variant.</p>",
     "features": [],
     "specs": {
@@ -252,7 +256,11 @@
     "id": "SBPIB6.5L",
     "title": "Steel Bird PEXA Induction Base 6.5L",
     "price": 2380,
-    "images": ["assets/img/Product Images/Steelbird pexa induction 6.5 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 6.5ltr/2_Steelbird pexa Induction base 6.5ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 6.5ltr/4_Steelbird pexa Induction base 6.5ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird PEXA Induction Base/Steelbird pexa Induction base 6.5ltr/6_Steelbird pexa Induction base.jpg"
+    ],
     "descriptionHtml": "<p>Induction base variant.</p>",
     "features": [],
     "specs": {
@@ -342,7 +350,11 @@
     "id": "SBM2L",
     "title": "Steel Bird MEXA 2L",
     "price": 1380,
-    "images": ["assets/img/Product Images/Steelbird mexa 2ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird MEXA/Steelbird mexa 2ltr/1_Steelbird mexa 2ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird MEXA/Steelbird mexa 2ltr/2_STEELBIRD mexa 2ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird MEXA/Steelbird mexa 2ltr/3_Steelbird mexa 2ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Steel Bird MEXA 2L.</p>",
     "features": [],
     "specs": {
@@ -360,7 +372,11 @@
     "id": "SBM3.5L",
     "title": "Steel Bird MEXA 3.5L",
     "price": 1680,
-    "images": ["assets/img/Product Images/Steelbird mexa 3.5 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird MEXA/Steelbird mexa 3.5ltr/1_STEELBIRD mexa 3.5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird MEXA/Steelbird mexa 3.5ltr/2_STEELBIRD mexa 3.5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird MEXA/Steelbird mexa 3.5ltr/3_STEELBIRD mexa 3.5ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Steel Bird MEXA 3.5L.</p>",
     "features": [],
     "specs": {
