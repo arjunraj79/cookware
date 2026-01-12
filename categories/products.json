@@ -278,7 +278,12 @@
     "id": "SBP8L",
     "title": "Steel Bird Big PEXA 8L",
     "price": 2780,
-    "images": ["/assets/img/Product Images/Steelbird big pexa 8ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 8ltr/1_Steelbird big pexa 8ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 8ltr/3_Steelbird big pexa 8ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 8ltr/4_Steelbird big pexa 8ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 8ltr/5_Steelbird big pexa 8ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Large capacity PEXA 8L.</p>",
     "features": [],
     "specs": {
@@ -296,7 +301,11 @@
     "id": "SBP10L",
     "title": "Steel Bird Big PEXA 10L",
     "price": 3030,
-    "images": ["assets/img/Product Images/Steelbird big pexa 10 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 10ltr/1_Steelbird big pexa 10 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 10ltr/2_Steelbird big pexa 10ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 10ltr/3_Steelbird big pexa 10ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Large capacity PEXA 10L.</p>",
     "features": [],
     "specs": {
@@ -314,7 +323,11 @@
     "id": "SBP12L",
     "title": "Steel Bird Big PEXA 12L",
     "price": 3380,
-    "images": ["assets/img/Product Images/Steelbird big pexa 12 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 12ltr/1_Steelbird big pexa 12 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 12ltr/2_Steelbird big pexa 12 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 12ltr/3_Steelbird big pexa 10ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Large capacity PEXA 12L.</p>",
     "features": [],
     "specs": {
@@ -332,7 +345,11 @@
     "id": "SBP15L",
     "title": "Steel Bird Big PEXA 15L",
     "price": 3880,
-    "images": ["assets/img/Product Images/Steelbird big pexa 15 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 15ltr/2_Steelbird big pexa 15ltr copy.jpeg",
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 15ltr/2_Steelbird big pexa 15ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird Big PEXA/Steelbird big pexa 15ltr/3_Steelbird big pexa 15ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Large capacity PEXA 15L.</p>",
     "features": [],
     "specs": {
@@ -538,7 +555,11 @@
     "id": "SBPIB1.5LB",
     "title": "Steel Bird PEXA Black Induction Base 1.5L",
     "price": 1530,
-    "images": ["assets/img/Product Images/Steelbird pexa black ib black lid 1.5 ltr.jpg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA Black Induction Base/Steelbird pexa black ib black lid 1.5 ltr/1_Steelbird pexa black ib black lid 1.5 ltr.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Black Induction Base/Steelbird pexa black ib black lid 1.5 ltr/2_Steelbird pexa black ib black lid 1.5 ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Black Induction Base/Steelbird pexa black ib black lid 1.5 ltr/3_Steelbird pexa black ib black lid 1.5 ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Black lid / induction base variant.</p>",
     "features": [],
     "specs": {
@@ -556,7 +577,11 @@
     "id": "SBPIB3LB",
     "title": "Steel Bird PEXA Black Induction Base 3L",
     "price": 2030,
-    "images": ["assets/img/Product Images/Steelbird pexa black ib black lid 3ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA Black Induction Base/Steelbird pexa black ib black lid 3ltr/1_Steelbird pexa black ib black lid 3ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird PEXA Black Induction Base/Steelbird pexa black ib black lid 3ltr/2_Steelbird pexa black ib black lid 3ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Black Induction Base/Steelbird pexa black ib black lid 3ltr/3_Steelbird pexa black ib black lid 3ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Black lid / induction base variant.</p>",
     "features": [],
     "specs": {
@@ -574,7 +599,11 @@
     "id": "SBPIB5LB",
     "title": "Steel Bird PEXA Black Induction Base 5L",
     "price": 2580,
-    "images": ["assets/img/Product Images/Steelbird pexa black ib with black lid 5 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird PEXA Black Induction Base/Steelbird pexa black ib black lid 5ltr/1_Steelbird pexa black ib with black lid 5 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird PEXA Black Induction Base/Steelbird pexa black ib black lid 5ltr/2_Steelbird pexa black ib with black lid 5ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird PEXA Black Induction Base/Steelbird pexa black ib black lid 5ltr/3_Steelbird pexa black ib with black lid 5ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Black lid / induction base variant.</p>",
     "features": [],
     "specs": {
@@ -592,7 +621,11 @@
     "id": "SBM2LB",
     "title": "Steel Bird MEXA Black 2L",
     "price": 1780,
-    "images": ["assets/img/Product Images/Steelbird mexa black ib with black lid 2 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 2LTR/1_Steelbird mexa black ib with black lid 2 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 2LTR/2_Steelbird mexa black with black lid 2ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 2LTR/3_Steelbird mexa black with black lid 2ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Black lid variant.</p>",
     "features": [],
     "specs": {
@@ -610,7 +643,12 @@
     "id": "SBM3.5LB",
     "title": "Steel Bird MEXA Black 3.5L",
     "price": 2180,
-    "images": ["assets/img/Product Images/Steelbird mexa black ib with black lid 3.5 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 3.5ltr/1_Steelbird mexa black ib with black lid 3.5 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 3.5ltr/2_Steelbird mexa black ib with black lid 3.5 ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 3.5ltr/3_Steelbird mexa black ib with black lid 3.5 ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 3.5ltr/4_Steelbird mexa black with black lid 3.5 copy.jpg"
+    ],
     "descriptionHtml": "<p>Black lid variant.</p>",
     "features": [],
     "specs": {
@@ -628,7 +666,11 @@
     "id": "SBM4LB",
     "title": "Steel Bird MEXA Black 4L",
     "price": 2430,
-    "images": ["assets/img/Product Images/Steelbird mexa black ib with black lid 4 ltr.jpg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 4ltr/1_Steelbird mexa black ib with black lid 4 ltr.jpg",
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 4ltr/2_Steelbird mexa black with black lid 4ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 4ltr/3_Steelbird mexa black with black lid 4ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Black lid variant.</p>",
     "features": [],
     "specs": {
@@ -646,7 +688,11 @@
     "id": "SBM5.5LB",
     "title": "Steel Bird MEXA Black 5.5L",
     "price": 2730,
-    "images": ["assets/img/Product Images/Steelbird mexa black ib with black lid 5.5 ltr.jpg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 5.5ltr/1_Steelbird mexa black with black lid 5.5 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 5.5ltr/2_Steelbird mexa black with black lid 5.5 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 5.5ltr/3_Steelbird mexa black with black lid 5.5 ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Black lid variant.</p>",
     "features": [],
     "specs": {
@@ -664,7 +710,11 @@
     "id": "SBM6.5LB",
     "title": "Steel Bird MEXA Black 6.5L",
     "price": 2880,
-    "images": ["assets/img/Product Images/Steelbird mexa black ib with black lid 6.5 ltr.jpeg"],
+    "images": [
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 6.5ltr/1_Steelbird mexa black with black lid 6.5 ltr.jpeg",
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 6.5ltr/2_Steelbird mexa black with black lid 6.5 ltr copy.jpg",
+      "assets/img/Cooker Images/Steel Bird Advocate MEXA Black/Steelbird mexa black with black lid 6.5ltr/3_Steelbird mexa black with black lid 6.5 ltr copy.jpg"
+    ],
     "descriptionHtml": "<p>Black lid variant.</p>",
     "features": [],
     "specs": {
